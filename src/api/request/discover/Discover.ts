@@ -1,4 +1,4 @@
-import { Movies, TVShows } from "../../common/model/CommonModels";
+import { Movies, TVShows } from "../../common/model/film/Film";
 import EndpointResource from "../../common/resource/EndpointResource";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";

@@ -1,7 +1,7 @@
+import { Genres } from "../../common/model/genre/Genre";
 import EndpointResource from "../../common/resource/EndpointResource";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
-import { Genres } from "./model/Models";
 import { GenreParams } from "./params/Params";
 
 class Genre extends TMDBRequest {

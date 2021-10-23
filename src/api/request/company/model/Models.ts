@@ -1,5 +1,7 @@
-export type CompanyDetails = {
-  id?: number;
+import { WithId } from "../../../common/model/CommonModels";
+import { Logo } from "../../../common/model/logo/Logo";
+
+export interface CompanyDetails extends WithId {
   description?: string;
   headquarters?: string;
   homepage?: string;
@@ -8,24 +10,14 @@ export type CompanyDetails = {
   origin_country?: string;
 };
 
-export type CompanyAlternativeNames = {
-  id?: number;
-  results: {
-    name?: string;
-    type?: string;
-  }[];
+interface CompanyAlternativeName {
+  name?: string;
+  type?: string;
+};
+export interface CompanyAlternativeNames extends WithId {
+  results: CompanyAlternativeName[];
 };
 
-export type CompanyImages = {
-  id?: number;
-  logos: {
-    id?: string;
-    file_type?: ".svg" | ".png";
-    file_path?: string;
-    width?: number;
-    height?: number;
-    aspect_ratio?: number;
-    vote_average?: number;
-    vote_count?: number;
-  }[];
+export interface CompanyImages extends WithId {
+  logos: Logo[];
 };

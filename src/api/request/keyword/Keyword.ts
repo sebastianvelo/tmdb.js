@@ -1,8 +1,8 @@
-import { Movies } from "../../common/model/CommonModels";
+import { Movies } from "../../common/model/film/Film";
+import { KeywordDetail } from "../../common/model/keyword/Keyword";
 import EndpointResource from "../../common/resource/EndpointResource";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
-import { KeywordDetails } from "./model/Models";
 
 class Keyword extends TMDBRequest {
   protected resource: string = EndpointResource.KEYWORD;
@@ -10,7 +10,7 @@ class Keyword extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: string) =>
-    this.get<KeywordDetails>(this.endpoints.GET_DETAILS(id));
+    this.get<KeywordDetail>(this.endpoints.GET_DETAILS(id));
 
   public getMovies = (id: string) =>
     this.get<Movies>(this.endpoints.GET_MOVIES(id));
