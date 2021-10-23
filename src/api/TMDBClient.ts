@@ -1,11 +1,11 @@
 import Company from "./request/company/Company";
 import Credit from "./request/credit/Credit";
 import Discover from "./request/discover/Discover";
-import Movie from "./request/film/movie/Movie";
 import Find from "./request/find/Find";
 import Genre from "./request/genre/Genre";
 import GuestSessions from "./request/guest-sessions/GuestSessions";
 import Keyword from "./request/keyword/Keyword";
+import Movie from "./request/movie/Movie";
 
 type TMDBVersion = "3" | "4";
 class TMDBClient {
