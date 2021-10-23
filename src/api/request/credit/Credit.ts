@@ -1,14 +1,14 @@
-import EndpointConfig from "../../../common/endpoint/EndpointConfig";
-import EndpointResource from "../../common/resource/EndpointResource";
-import TMDBRequest from "../TMDBRequest";
-import CreditEndpoints from "./endpoints/CreditEndpoints";
-import { CreditDetails } from "./model/Credit.types";
+import EndpointResource from '../../common/resource/EndpointResource';
+import TMDBRequest from '../TMDBRequest';
+import Endpoints from './endpoints/Endpoints';
+import { CreditDetails } from './model/Models';
 
-class Company extends TMDBRequest {
-    protected resource: string = EndpointResource.CREDIT;
-    protected endpoints: EndpointConfig = CreditEndpoints;
+class Credit extends TMDBRequest {
+  protected resource: string = EndpointResource.CREDIT;
 
-    public getDetails = (id: string) => this.get<CreditDetails>(this.endpoints.GET_DETAILS(id));
+  protected endpoints = Endpoints;
+
+  public getDetails = (id: string) => this.get<CreditDetails>(this.endpoints.GET_DETAILS(id));
 }
 
-export default Company;
+export default Credit;

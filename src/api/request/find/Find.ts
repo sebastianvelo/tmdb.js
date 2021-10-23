@@ -1,15 +1,15 @@
-import EndpointConfig from "../../../common/endpoint/EndpointConfig";
-import EndpointResource from "../../common/resource/EndpointResource";
-import TMDBRequest from "../TMDBRequest";
-import FindEndpoints from "./endpoints/FindEndpoints";
-import { FindResult } from "./model/FindModels.types";
-import { FindParams } from "./params/FindParams.types";
+import EndpointResource from '../../common/resource/EndpointResource';
+import TMDBRequest from '../TMDBRequest';
+import Endpoints from './endpoints/Endpoints';
+import { FindResult } from './model/Models';
+import { FindParams } from './params/Params';
 
 class Find extends TMDBRequest {
-    protected resource: string = EndpointResource.FIND;
-    protected endpoints: EndpointConfig = FindEndpoints;
+  protected resource: string = EndpointResource.FIND;
 
-    public find = (id: string, params: FindParams) => this.get<FindResult>(this.endpoints.FIND(id), params);
+  protected endpoints = Endpoints;
+
+  public find = (id: string, params?: FindParams) => this.get<FindResult>(this.endpoints.FIND(id), params);
 }
 
 export default Find;
