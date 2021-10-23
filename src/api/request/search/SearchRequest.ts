@@ -5,7 +5,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class SearchRequest extends TMDBRequest {
-  protected resource: string = EndpointResource.SEARCH;
+  protected resource = EndpointResource.SEARCH;
 
   protected endpoints = Endpoints;
 

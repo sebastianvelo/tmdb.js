@@ -5,7 +5,7 @@ import Endpoints from "./endpoints/Endpoints";
 import { GuestSessionParams } from "../../params/guest-sessions/GuestSessionParams";
 
 class GuestSessionRequest extends TMDBRequest {
-  protected resource: string = EndpointResource.GUEST_SESSION;
+  protected resource = EndpointResource.GUEST_SESSION;
 
   protected endpoints = Endpoints;
 

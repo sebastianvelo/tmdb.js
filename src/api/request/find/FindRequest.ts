@@ -5,7 +5,7 @@ import Endpoints from "./endpoints/Endpoints";
 import { FindParams } from "../../params/find/FindParams";
 
 class FindRequest extends TMDBRequest {
-  protected resource: string = EndpointResource.FIND;
+  protected resource = EndpointResource.FIND;
 
   protected endpoints = Endpoints;
 

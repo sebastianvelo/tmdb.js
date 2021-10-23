@@ -5,7 +5,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class TrendingRequest extends TMDBRequest {
-  protected resource: string = EndpointResource.TRENDING;
+  protected resource = EndpointResource.TRENDING;
 
   protected endpoints = Endpoints;
 

@@ -5,7 +5,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class KeywordRequest extends TMDBRequest {
-  protected resource: string = EndpointResource.KEYWORD;
+  protected resource = EndpointResource.KEYWORD;
 
   protected endpoints = Endpoints;
 

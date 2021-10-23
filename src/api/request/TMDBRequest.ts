@@ -1,6 +1,7 @@
 import { Method } from "axios";
 import APIRequest from "../../common/APIRequest";
 import QueryParams from "../../common/params/QueryParams";
+import EndpointResource from "../resource/EndpointResource";
 
 abstract class TMDBRequest extends APIRequest {
   protected baseURL: string = "https://api.themoviedb.org/";
@@ -8,6 +9,8 @@ abstract class TMDBRequest extends APIRequest {
   protected headers: Record<string, string> = {};
 
   protected apiKey: string;
+
+  protected abstract readonly resource: EndpointResource;
 
   constructor(version: string, apiKey: string) {
     super(version);

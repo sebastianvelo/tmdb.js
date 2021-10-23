@@ -5,7 +5,7 @@ import Endpoints from "./endpoints/Endpoints";
 import { GenreParams } from "../../params/genre/GenreParams";
 
 class GenreRequest extends TMDBRequest {
-  protected resource: string = EndpointResource.GENRE;
+  protected resource = EndpointResource.GENRE;
 
   protected endpoints = Endpoints;
 

@@ -5,7 +5,7 @@ import { DetailsParams, NowPlayingParams, UpcomingParams } from "../../params/fi
 import Endpoints from "./endpoints/Endpoints";
 
 class MovieRequest extends FilmRequest {
-  protected resource: string = EndpointResource.MOVIE;
+  protected resource = EndpointResource.MOVIE;
 
   protected endpoints = { ...super.endpoints, ...Endpoints };
 

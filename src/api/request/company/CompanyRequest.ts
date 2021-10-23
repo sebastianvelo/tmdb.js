@@ -4,7 +4,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class CompanyRequest extends TMDBRequest {
-  protected resource: string = EndpointResource.COMPANY;
+  protected resource = EndpointResource.COMPANY;
 
   protected endpoints = Endpoints;
 
