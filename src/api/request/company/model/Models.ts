@@ -20,7 +20,7 @@ export type CompanyImages = {
   id?: number;
   logos: {
     id?: string;
-    file_type?: '.svg' | '.png';
+    file_type?: ".svg" | ".png";
     file_path?: string;
     width?: number;
     height?: number;

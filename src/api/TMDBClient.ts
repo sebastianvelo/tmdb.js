@@ -1,9 +1,9 @@
-import Company from './request/company/Company';
-import Credit from './request/credit/Credit';
-import Discover from './request/discover/Discover';
-import Genre from './request/genre/Genre';
+import Company from "./request/company/Company";
+import Credit from "./request/credit/Credit";
+import Discover from "./request/discover/Discover";
+import Genre from "./request/genre/Genre";
 
-type TMDBVersion = '3' | '4';
+type TMDBVersion = "3" | "4";
 class TMDBClient {
   public readonly version: TMDBVersion;
 

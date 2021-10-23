@@ -1,9 +1,9 @@
-import { Method } from 'axios';
-import APIRequest from '../../common/APIRequest';
-import QueryParams from '../../common/params/QueryParams';
+import { Method } from "axios";
+import APIRequest from "../../common/APIRequest";
+import QueryParams from "../../common/params/QueryParams";
 
 abstract class TMDBRequest extends APIRequest {
-  protected baseURL: string = 'https://api.themoviedb.org/';
+  protected baseURL: string = "https://api.themoviedb.org/";
 
   protected headers: Record<string, string> = {};
 
@@ -14,7 +14,11 @@ abstract class TMDBRequest extends APIRequest {
     this.apiKey = apiKey;
   }
 
-  protected async req<T>(method: Method, url: string, params?: QueryParams): Promise<T> {
+  protected async req<T>(
+    method: Method,
+    url: string,
+    params?: QueryParams
+  ): Promise<T> {
     const paramsWithApiKey = { ...params, api_key: this.apiKey };
     return super.req(method, url, paramsWithApiKey);
   }

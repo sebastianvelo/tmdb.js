@@ -1,4 +1,4 @@
-import { Genre, Movie } from '../../../common/model/CommonModels';
+import { Genre, Movie } from "../../../common/model/CommonModels";
 
 type ProductionCompany = {
   id?: number;
@@ -17,7 +17,13 @@ type SpokenLanguage = {
   name?: string;
 };
 
-type MovieStatus = 'Rumored' | 'Planned' | 'In Production' | 'Post Production' | 'Released' | 'Canceled';
+type MovieStatus =
+  | "Rumored"
+  | "Planned"
+  | "In Production"
+  | "Post Production"
+  | "Released"
+  | "Canceled";
 
 export interface MovieDetail extends Movie {
   budget?: number;
