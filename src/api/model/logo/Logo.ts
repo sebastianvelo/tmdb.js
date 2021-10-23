@@ -1,6 +1,7 @@
+type FileType = ".svg" | ".png";
 export interface Logo {
   id?: string;
-  file_type?: ".svg" | ".png";
+  file_type?: FileType;
   file_path?: string;
   width?: number;
   height?: number;

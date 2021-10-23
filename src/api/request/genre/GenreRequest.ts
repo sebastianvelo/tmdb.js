@@ -1,8 +1,8 @@
-import EndpointResource from "../../common/resource/EndpointResource";
+import EndpointResource from "../../resource/EndpointResource";
 import { GenresResponse } from "../../response/common/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
-import { GenreParams } from "./params/Params";
+import { GenreParams } from "../../params/genre/GenreParams";
 
 class GenreRequest extends TMDBRequest {
   protected resource: string = EndpointResource.GENRE;

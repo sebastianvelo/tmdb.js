@@ -1,4 +1,4 @@
-type SortBy =
+export type SortBy =
   | "popularity.asc"
   | "popularity.desc"
   | "release_date.asc"
@@ -14,8 +14,12 @@ type SortBy =
   | "vote_count.asc"
   | "vote_count.desc";
 
-export interface GuestSessionParams {
-  language?: string;
-  region?: string;
-  sort_by?: SortBy;
-}
+export type ExternalSource =
+  | "imdb_id"
+  | "freebase_mid"
+  | "freebase_id"
+  | "tvdb_id"
+  | "tvrage_id"
+  | "facebook_id"
+  | "twitter_id"
+  | "instagram_id";

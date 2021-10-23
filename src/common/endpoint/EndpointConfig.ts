@@ -1,5 +1,5 @@
-import Endpoint from "./Endpoint";
+import EndpointPath from "./EndpointPath";
 
-type EndpointConfig = { [key: string]: Endpoint };
+type EndpointConfig = { [key: string]: EndpointPath };
 
 export default EndpointConfig;

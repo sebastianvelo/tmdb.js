@@ -1,5 +1,5 @@
-import { WithId } from "../CommonModels";
+import { TMDBEntity } from "../CommonModels";
 
-export interface Genre extends WithId {
+export interface Genre extends TMDBEntity {
   name?: string;
 };

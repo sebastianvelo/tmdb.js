@@ -1,5 +1,5 @@
 import { TimeWindow } from "../../model/trending/Trending";
-import EndpointResource from "../../common/resource/EndpointResource";
+import EndpointResource from "../../resource/EndpointResource";
 import { AllMediaTypesResponse, MoviesResponse, PeopleResponse, TVShowsResponse } from "../../response/common/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";

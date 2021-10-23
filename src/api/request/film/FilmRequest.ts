@@ -14,7 +14,7 @@ import {
   SimilarParams,
   TopRatedParams,
   VideosParams
-} from "./params/Params";
+} from "../../params/film/FilmParams";
 
 abstract class FilmRequest extends TMDBRequest {
   protected endpoints = Endpoints;

@@ -1,7 +1,7 @@
-import { WithId } from "../CommonModels";
+import { TMDBEntity } from "../CommonModels";
 import { Rating } from "../rating/Rating";
 
-interface Film extends Rating, WithId {
+interface Film extends Rating, TMDBEntity {
   adult?: boolean;
   backdrop_path?: string | null;
   original_title?: string;
@@ -21,7 +21,7 @@ export interface TVShow extends Film {
   name: string;
   original_name: string;
 }
-export interface Episode extends Rating, WithId {
+export interface Episode extends Rating, TMDBEntity {
   air_date?: string;
   episode_number?: number;
   name?: string;

@@ -1,4 +1,4 @@
-export interface WithId {
+export interface TMDBEntity {
   id?: number;
 }
 

@@ -1,5 +1,5 @@
-import EndpointResource from "../../common/resource/EndpointResource";
-import { CompanyAlternativeNames, CompanyDetailsResponse, CompanyImages } from "../../response/company/CompanyResponse";
+import EndpointResource from "../../resource/EndpointResource";
+import { CompanyAlternativeNames, CompanyDetailsResponse, CompanyImagesResponse } from "../../response/company/CompanyResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
@@ -15,7 +15,7 @@ class CompanyRequest extends TMDBRequest {
     this.get<CompanyAlternativeNames>(this.endpoints.GET_ALTERNATIVE_NAMES(id));
 
   public getImages = (id: string) =>
-    this.get<CompanyImages>(this.endpoints.GET_IMAGES(id));
+    this.get<CompanyImagesResponse>(this.endpoints.GET_IMAGES(id));
 }
 
 export default CompanyRequest;

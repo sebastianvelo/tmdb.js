@@ -1,4 +1,4 @@
-import { WithId } from "../../model/CommonModels";
+import { TMDBEntity } from "../../model/CommonModels";
 import { ProductionCompany, ProductionCountry } from "../../model/company/Company";
 import { SpokenLanguage, MovieStatus, AlternativeTitle } from "../../model/film/Film";
 import { Genre } from "../../model/genre/Genre";
@@ -21,6 +21,6 @@ export interface FilmDetailResponse {
   vote_count?: number;
 };
 
-export interface FilmAlternativeTitlesResponse extends WithId {
+export interface FilmAlternativeTitlesResponse extends TMDBEntity {
   titles?: AlternativeTitle[];
 }

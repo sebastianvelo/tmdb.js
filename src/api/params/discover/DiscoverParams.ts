@@ -1,28 +1,10 @@
-type SortBy =
-  | "popularity.asc"
-  | "popularity.desc"
-  | "release_date.asc"
-  | "release_date.desc"
-  | "revenue.asc"
-  | "revenue.desc"
-  | "primary_release_date.asc"
-  | "primary_release_date.desc"
-  | "original_title.asc"
-  | "original_title.desc"
-  | "vote_average.asc"
-  | "vote_average.desc"
-  | "vote_count.asc"
-  | "vote_count.desc";
+import { LanguageParams, PageParams, RegionParams, SortParams } from "../Params";
 
-export interface DiscoverParams {
-  language?: string;
-  region?: string;
-  sort_by?: SortBy;
+export interface DiscoverParams extends LanguageParams, RegionParams, SortParams, PageParams {
   certification_country?: string;
   certification?: string;
   include_adult?: boolean;
   include_video?: boolean;
-  page?: number;
   primary_release_year?: number;
   with_release_type?: number;
   year?: number;

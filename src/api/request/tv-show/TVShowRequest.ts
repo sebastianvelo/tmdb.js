@@ -1,7 +1,7 @@
-import EndpointResource from "../../common/resource/EndpointResource";
+import EndpointResource from "../../resource/EndpointResource";
 import { TVShowDetailResponse } from "../../response/tv-show/TVShowResponse";
 import FilmRequest from "../film/FilmRequest";
-import { DetailsParams } from "../film/params/Params";
+import { DetailsParams } from "../../params/film/FilmParams";
 import Endpoints from "./endpoints/Endpoints";
 
 class TVShowRequest extends FilmRequest {

@@ -1,6 +1,6 @@
-import { WithId } from "../../model/CommonModels";
+import { TMDBEntity } from "../../model/CommonModels";
 
-interface Person extends WithId {
+interface Person extends TMDBEntity {
   name?: string;
 }
 interface Season {
@@ -8,14 +8,14 @@ interface Season {
   poster_path: string;
   season_number: number;
 }
-interface Media extends WithId {
+interface Media extends TMDBEntity {
   name: string;
   original_name: string;
   character: string;
   episodes: [];
   seasons: Season[];
 }
-export interface CreditDetailsResponse extends WithId {
+export interface CreditDetailsResponse extends TMDBEntity {
   credit_type: string;
   department?: string;
   job?: string;

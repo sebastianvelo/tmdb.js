@@ -1,4 +1,4 @@
-import EndpointResource from "../../common/resource/EndpointResource";
+import EndpointResource from "../../resource/EndpointResource";
 import CompanyRequest from "../company/CompanyRequest";
 
 class NetworkRequest extends CompanyRequest {

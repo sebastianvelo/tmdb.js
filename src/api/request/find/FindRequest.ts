@@ -1,8 +1,8 @@
-import EndpointResource from "../../common/resource/EndpointResource";
+import EndpointResource from "../../resource/EndpointResource";
 import { FindResponse } from "../../response/find/FindResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
-import { FindParams } from "./params/Params";
+import { FindParams } from "../../params/find/FindParams";
 
 class FindRequest extends TMDBRequest {
   protected resource: string = EndpointResource.FIND;

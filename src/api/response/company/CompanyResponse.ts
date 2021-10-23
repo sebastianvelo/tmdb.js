@@ -1,4 +1,4 @@
-import { WithId } from "../../model/CommonModels";
+import { TMDBEntity } from "../../model/CommonModels";
 import { Company } from "../../model/company/Company";
 import { Logo } from "../../model/logo/Logo";
 
@@ -13,10 +13,10 @@ interface CompanyAlternativeNameResponse {
   name?: string;
   type?: string;
 };
-export interface CompanyAlternativeNames extends WithId {
+export interface CompanyAlternativeNames extends TMDBEntity {
   results: CompanyAlternativeNameResponse[];
 };
 
-export interface CompanyImages extends WithId {
+export interface CompanyImagesResponse extends TMDBEntity {
   logos: Logo[];
 };

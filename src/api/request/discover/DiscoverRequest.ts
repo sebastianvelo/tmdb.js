@@ -1,8 +1,8 @@
-import EndpointResource from "../../common/resource/EndpointResource";
+import EndpointResource from "../../resource/EndpointResource";
 import { DiscoverMoviesResponse, DiscoverTVShowsResponse } from "../../response/discover/DiscoverResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
-import { DiscoverParams } from "./params/Params";
+import { DiscoverParams } from "../../params/discover/DiscoverParams";
 
 class DiscoverRequest extends TMDBRequest {
   protected resource: string = EndpointResource.DISCOVER;

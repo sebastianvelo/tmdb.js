@@ -1,7 +1,7 @@
-import EndpointResource from "../../common/resource/EndpointResource";
+import EndpointResource from "../../resource/EndpointResource";
 import { MovieDetailResponse } from "../../response/movie/MovieResponse";
 import FilmRequest from "../film/FilmRequest";
-import { DetailsParams, NowPlayingParams, UpcomingParams } from "../film/params/Params";
+import { DetailsParams, NowPlayingParams, UpcomingParams } from "../../params/film/FilmParams";
 import Endpoints from "./endpoints/Endpoints";
 
 class MovieRequest extends FilmRequest {
