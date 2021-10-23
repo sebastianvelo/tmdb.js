@@ -4,9 +4,13 @@ import QueryParams from './params/QueryParams';
 
 abstract class APIRequest {
     protected abstract readonly baseURL: string;
+
     protected abstract readonly resource: string;
+
     protected abstract readonly headers: Record<string, string>;
+
     protected abstract readonly endpoints: EndpointConfig;
+
     protected readonly version: string;
 
     constructor(version: string) {

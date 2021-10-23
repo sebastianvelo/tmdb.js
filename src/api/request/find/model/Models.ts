@@ -1,6 +1,6 @@
 import {
   Episodes, Movie, Person, TVShow,
-} from '../../../common/model/CommonModels.types';
+} from '../../../common/model/CommonModels';
 
 export type FindResult = {
   movie_results: Movie[];

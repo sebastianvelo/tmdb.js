@@ -10,7 +10,6 @@ class Movie extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: string, params?: MovieDetailsParams) => this.get<MovieDetail>(this.endpoints.GET_DETAILS(id), params);
-
 }
 
 export default Movie;

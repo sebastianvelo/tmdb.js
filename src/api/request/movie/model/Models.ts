@@ -1,4 +1,4 @@
-import { Genre, Movie } from "../../../common/model/CommonModels.types";
+import { Genre, Movie } from '../../../common/model/CommonModels';
 
 type ProductionCompany = {
   id?: number;
@@ -10,12 +10,12 @@ type ProductionCompany = {
 type ProductionCountry = {
   iso_3166_1?: string;
   name?: string;
-}
+};
 
 type SpokenLanguage = {
   iso_639_1?: string;
   name?: string;
-}
+};
 
 type MovieStatus = 'Rumored' | 'Planned' | 'In Production' | 'Post Production' | 'Released' | 'Canceled';
 

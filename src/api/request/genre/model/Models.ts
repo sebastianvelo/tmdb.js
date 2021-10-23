@@ -1,4 +1,4 @@
-import { Genre } from '../../../common/model/CommonModels.types';
+import { Genre } from '../../../common/model/CommonModels';
 
 export type Genres = {
   genres?: Genre[]

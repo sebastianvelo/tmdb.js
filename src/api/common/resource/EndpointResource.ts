@@ -5,7 +5,7 @@ enum EndpointResource {
   FIND = '/find',
   GENRE = '/genre',
   GUEST_SESSION = '/guest_session',
-  KEYWORD = "/keyword",
+  KEYWORD = '/keyword',
   MOVIE = '/movie',
 }
 
