@@ -1,5 +1,5 @@
-import { Movies, TVShows, Episodes } from "../../common/model/film/Film";
 import EndpointResource from "../../common/resource/EndpointResource";
+import { MoviesResponse, TVShowsResponse, EpisodesResponse } from "../../response/common/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { GuestSessionParams } from "./params/Params";
@@ -9,14 +9,14 @@ class GuestSession extends TMDBRequest {
 
   protected endpoints = Endpoints;
 
-  public movies = (guest_session_id: string, params?: GuestSessionParams) =>
-    this.get<Movies>(this.endpoints.MOVIES(guest_session_id), params);
+  public movies = (guest_session_id: string, query?: GuestSessionParams) =>
+    this.get<MoviesResponse>(this.endpoints.MOVIES(guest_session_id), query);
 
-  public tvShows = (guest_session_id: string, params?: GuestSessionParams) =>
-    this.get<TVShows>(this.endpoints.TV_SHOWS(guest_session_id), params);
+  public tvShows = (guest_session_id: string, query?: GuestSessionParams) =>
+    this.get<TVShowsResponse>(this.endpoints.TV_SHOWS(guest_session_id), query);
 
-  public episodes = (guest_session_id: string, params?: GuestSessionParams) =>
-    this.get<Episodes>(this.endpoints.EPISODES(guest_session_id), params);
+  public episodes = (guest_session_id: string, query?: GuestSessionParams) =>
+    this.get<EpisodesResponse>(this.endpoints.EPISODES(guest_session_id), query);
 }
 
 export default GuestSession;

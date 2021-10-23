@@ -1,12 +1,4 @@
-interface LanguageParams {
-  language?: string;
-}
-interface PageParams {
-  page?: number;
-}
-interface RegionParams {
-  region?: string;
-}
+import { LanguageParams, PageParams, RegionParams } from "../../../common/params/Params";
 
 export interface DetailsParams extends LanguageParams {
   append_to_response?: string;

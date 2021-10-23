@@ -1,4 +1,4 @@
-import { WithId, PaginableResponse } from "../CommonModels";
+import { WithId } from "../CommonModels";
 import { Rating } from "../rating/Rating";
 
 interface Film extends Rating, WithId {
@@ -32,25 +32,10 @@ export interface Episode extends Rating, WithId {
   still_path?: string | null;
 }
 
-export type Movies = PaginableResponse<Movie>;
-export type TVShows = PaginableResponse<TVShow>;
-export type Episodes = PaginableResponse<Episode>;
-
 export type AlternativeTitle = {
   iso_3166_1?: string;
   title?: string;
   type?: string;
-};
-
-export interface ProductionCompany extends WithId {
-  name?: string;
-  logo_path?: string | null;
-  origin_country: string;
-};
-
-export type ProductionCountry = {
-  iso_3166_1?: string;
-  name?: string;
 };
 
 export type SpokenLanguage = {

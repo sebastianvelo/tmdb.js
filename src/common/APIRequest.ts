@@ -20,30 +20,30 @@ abstract class APIRequest {
   protected async req<T>(
     method: Method,
     url: string,
-    params?: QueryParams
+    query?: QueryParams
   ): Promise<T> {
     const response = await axios.request<T>(
-      this.getRequestConfig(method, url, params)
+      this.getRequestConfig(method, url, query)
     );
     return response.data;
   }
 
-  protected get<T>(url: string, params?: QueryParams): Promise<T> {
-    return this.req("GET", url, params);
+  protected get<T>(url: string, query?: QueryParams): Promise<T> {
+    return this.req("GET", url, query);
   }
 
-  protected post<T>(url: string, params?: QueryParams): Promise<T> {
-    return this.req("POST", url, params);
+  protected post<T>(url: string, query?: QueryParams): Promise<T> {
+    return this.req("POST", url, query);
   }
 
   private getRequestConfig(
     method: Method,
     url: string,
-    params?: QueryParams
+    query?: QueryParams
   ): AxiosRequestConfig {
     return {
       method,
-      params,
+      params: query,
       headers: this.headers,
       url: this.getEndpoint(url)
     };

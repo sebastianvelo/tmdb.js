@@ -1,8 +1,9 @@
-import { WithId } from "../../../common/model/CommonModels";
-import { ProductionCompany, ProductionCountry, SpokenLanguage, MovieStatus, AlternativeTitle } from "../../../common/model/film/Film";
-import Genre from "../../genre/Genre";
+import { WithId } from "../../common/model/CommonModels";
+import { ProductionCompany, ProductionCountry } from "../../common/model/company/Company";
+import { SpokenLanguage, MovieStatus, AlternativeTitle } from "../../common/model/film/Film";
+import Genre from "../../request/genre/Genre";
 
-export interface FilmDetail {
+export interface FilmDetailResponse {
   budget?: number;
   genres?: Genre[];
   homepage?: string | null;
@@ -20,6 +21,6 @@ export interface FilmDetail {
   vote_count?: number;
 };
 
-export interface AlternativeTitles extends WithId {
+export interface FilmAlternativeTitlesResponse extends WithId {
   titles?: AlternativeTitle[];
 }

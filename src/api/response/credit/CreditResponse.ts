@@ -1,4 +1,4 @@
-import { WithId } from "../../../common/model/CommonModels";
+import { WithId } from "../../common/model/CommonModels";
 
 interface Person extends WithId {
   name?: string;
@@ -15,7 +15,7 @@ interface Media extends WithId {
   episodes: [];
   seasons: Season[];
 }
-export interface CreditDetails extends WithId {
+export interface CreditDetailsResponse extends WithId {
   credit_type: string;
   department?: string;
   job?: string;

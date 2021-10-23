@@ -1,11 +1,7 @@
 import EndpointResource from "../../common/resource/EndpointResource";
+import { CompanyAlternativeNames, CompanyDetailsResponse, CompanyImages } from "../../response/company/CompanyResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
-import {
-  CompanyAlternativeNames,
-  CompanyDetails,
-  CompanyImages
-} from "./model/Models";
 
 class Company extends TMDBRequest {
   protected resource: string = EndpointResource.COMPANY;
@@ -13,7 +9,7 @@ class Company extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: string) =>
-    this.get<CompanyDetails>(this.endpoints.GET_DETAILS(id));
+    this.get<CompanyDetailsResponse>(this.endpoints.GET_DETAILS(id));
 
   public getAlternativeNames = (id: string) =>
     this.get<CompanyAlternativeNames>(this.endpoints.GET_ALTERNATIVE_NAMES(id));

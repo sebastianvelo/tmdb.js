@@ -17,10 +17,10 @@ abstract class TMDBRequest extends APIRequest {
   protected async req<T>(
     method: Method,
     url: string,
-    params?: QueryParams
+    query?: QueryParams
   ): Promise<T> {
-    const paramsWithApiKey = { ...params, api_key: this.apiKey };
-    return super.req(method, url, paramsWithApiKey);
+    const queryApiKey = { ...query, api_key: this.apiKey };
+    return super.req(method, url, queryApiKey);
   }
 }
 
