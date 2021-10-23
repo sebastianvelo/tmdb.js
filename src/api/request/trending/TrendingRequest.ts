@@ -1,10 +1,10 @@
-import { TimeWindow } from "../../common/model/trending/Trending";
+import { TimeWindow } from "../../model/trending/Trending";
 import EndpointResource from "../../common/resource/EndpointResource";
 import { AllMediaTypesResponse, MoviesResponse, TVShowsResponse, PeopleResponse } from "../../response/common/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
-class Trending extends TMDBRequest {
+class TrendingRequest extends TMDBRequest {
   protected resource: string = EndpointResource.TRENDING;
 
   protected endpoints = Endpoints;
@@ -22,4 +22,4 @@ class Trending extends TMDBRequest {
     this.get<PeopleResponse>(this.endpoints.GET_PEOPLE(timeWindow));
 }
 
-export default Trending;
+export default TrendingRequest;

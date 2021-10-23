@@ -4,7 +4,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { GuestSessionParams } from "./params/Params";
 
-class GuestSession extends TMDBRequest {
+class GuestSessionRequest extends TMDBRequest {
   protected resource: string = EndpointResource.GUEST_SESSION;
 
   protected endpoints = Endpoints;
@@ -19,4 +19,4 @@ class GuestSession extends TMDBRequest {
     this.get<EpisodesResponse>(this.endpoints.EPISODES(guest_session_id), query);
 }
 
-export default GuestSession;
+export default GuestSessionRequest;

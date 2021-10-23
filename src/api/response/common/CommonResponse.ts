@@ -1,17 +1,20 @@
-import { PaginableResponse } from "../../common/model/CommonModels";
-import { Episode } from "../../common/model/film/Film";
-import { Genre } from "../../common/model/genre/Genre";
+import { PaginableResponse } from "../../model/CommonModels";
+import { Episode } from "../../model/film/Film";
+import { Genre } from "../../model/genre/Genre";
 import { KeywordDetailResponse } from "../keyword/Keyword";
-import { Person } from "../../common/model/person/Person";
-import Movie from "../../request/movie/Movie";
-import TVShow from "../../request/tv-show/TVShow";
+import { Person } from "../../model/person/Person";
+import MovieRequest from "../../request/movie/MovieRequest";
+import TVShowRequest from "../../request/tv-show/TVShowRequest";
+import { Company } from "../../model/company/Company";
 
-export type MoviesResponse = PaginableResponse<Movie>;
-export type TVShowsResponse = PaginableResponse<TVShow>;
+export type MoviesResponse = PaginableResponse<MovieRequest>;
+export type TVShowsResponse = PaginableResponse<TVShowRequest>;
 export type EpisodesResponse = PaginableResponse<Episode>;
-export type AllMediaTypesResponse = PaginableResponse<(Person | TVShow | Movie)>;
+export type AllMediaTypesResponse = PaginableResponse<(Person | TVShowRequest | MovieRequest)>;
 export type PeopleResponse = PaginableResponse<Person>;
 export type KeywordsResponse = PaginableResponse<KeywordDetailResponse>;
+export type CompaniesResponse = PaginableResponse<Company>;
+
 export interface GenresResponse {
     genres?: Genre[];
   };

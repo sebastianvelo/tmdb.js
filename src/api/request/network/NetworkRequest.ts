@@ -1,9 +1,9 @@
 import EndpointResource from "../../common/resource/EndpointResource";
-import Company from "../company/Company";
+import CompanyRequest from "../company/CompanyRequest";
 
-class Network extends Company {
+class NetworkRequest extends CompanyRequest {
   protected resource: string = EndpointResource.NETWORK;
 
 }
 
-export default Network;
+export default NetworkRequest;

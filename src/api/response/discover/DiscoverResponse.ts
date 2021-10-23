@@ -1,4 +1,4 @@
-import { Movies, TVShows } from "../../common/model/film/Film";
+import { Movies, TVShows } from "../model/film/Film";
 
 export type DiscoverMoviesResponse = Movies;
 export type DiscoverTVShowsResponse = TVShows;

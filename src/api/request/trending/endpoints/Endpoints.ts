@@ -1,4 +1,4 @@
-import { TimeWindow } from "../../../common/model/trending/Trending";
+import { TimeWindow } from "../../../model/trending/Trending";
 
 const Endpoints = {
   GET_ALL: (timeWindow: TimeWindow) => `/all/${timeWindow}`,

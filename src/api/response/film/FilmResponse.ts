@@ -1,7 +1,7 @@
-import { WithId } from "../../common/model/CommonModels";
-import { ProductionCompany, ProductionCountry } from "../../common/model/company/Company";
-import { SpokenLanguage, MovieStatus, AlternativeTitle } from "../../common/model/film/Film";
-import { Genre } from "../../common/model/genre/Genre";
+import { WithId } from "../../model/CommonModels";
+import { ProductionCompany, ProductionCountry } from "../../model/company/Company";
+import { SpokenLanguage, MovieStatus, AlternativeTitle } from "../../model/film/Film";
+import { Genre } from "../../model/genre/Genre";
 
 export interface FilmDetailResponse {
   budget?: number;

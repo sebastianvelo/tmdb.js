@@ -4,7 +4,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { GenreParams } from "./params/Params";
 
-class Genre extends TMDBRequest {
+class GenreRequest extends TMDBRequest {
   protected resource: string = EndpointResource.GENRE;
 
   protected endpoints = Endpoints;
@@ -16,4 +16,4 @@ class Genre extends TMDBRequest {
     this.get<GenresResponse>(this.endpoints.MOVIES(), query);
 }
 
-export default Genre;
+export default GenreRequest;

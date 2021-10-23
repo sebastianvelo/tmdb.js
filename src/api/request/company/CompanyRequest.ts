@@ -3,7 +3,7 @@ import { CompanyAlternativeNames, CompanyDetailsResponse, CompanyImages } from "
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
-class Company extends TMDBRequest {
+class CompanyRequest extends TMDBRequest {
   protected resource: string = EndpointResource.COMPANY;
 
   protected endpoints = Endpoints;
@@ -18,4 +18,4 @@ class Company extends TMDBRequest {
     this.get<CompanyImages>(this.endpoints.GET_IMAGES(id));
 }
 
-export default Company;
+export default CompanyRequest;

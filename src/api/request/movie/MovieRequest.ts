@@ -1,10 +1,10 @@
 import EndpointResource from "../../common/resource/EndpointResource";
 import { MovieDetailResponse } from "../../response/movie/MovieResponse";
-import Film from "../film/Film";
+import FilmRequest from "../film/FilmRequest";
 import { DetailsParams, NowPlayingParams, UpcomingParams } from "../film/params/Params";
 import Endpoints from "./endpoints/Endpoints";
 
-class Movie extends Film {
+class MovieRequest extends FilmRequest {
   protected resource: string = EndpointResource.MOVIE;
 
   protected endpoints = { ...super.endpoints, ...Endpoints };
@@ -19,4 +19,4 @@ class Movie extends Film {
     this.get(this.endpoints.GET_UPCOMING(), query);
 }
 
-export default Movie;
+export default MovieRequest;

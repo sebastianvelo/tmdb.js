@@ -1,6 +1,6 @@
-import { WithId } from "../../common/model/CommonModels";
-import { Company } from "../../common/model/company/Company";
-import { Logo } from "../../common/model/logo/Logo";
+import { WithId } from "../../model/CommonModels";
+import { Company } from "../../model/company/Company";
+import { Logo } from "../../model/logo/Logo";
 
 export interface CompanyDetailsResponse extends Company {
   description?: string;

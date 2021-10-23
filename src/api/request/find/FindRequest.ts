@@ -4,7 +4,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { FindParams } from "./params/Params";
 
-class Find extends TMDBRequest {
+class FindRequest extends TMDBRequest {
   protected resource: string = EndpointResource.FIND;
 
   protected endpoints = Endpoints;
@@ -13,4 +13,4 @@ class Find extends TMDBRequest {
     this.get<FindResponse>(this.endpoints.FIND(id), query);
 }
 
-export default Find;
+export default FindRequest;

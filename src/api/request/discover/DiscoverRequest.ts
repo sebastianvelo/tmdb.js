@@ -4,7 +4,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { DiscoverParams } from "./params/Params";
 
-class Discover extends TMDBRequest {
+class DiscoverRequest extends TMDBRequest {
   protected resource: string = EndpointResource.DISCOVER;
 
   protected endpoints = Endpoints;
@@ -16,4 +16,4 @@ class Discover extends TMDBRequest {
     this.get<DiscoverTVShowsResponse>(this.endpoints.TV_SHOWS(), query);
 }
 
-export default Discover;
+export default DiscoverRequest;

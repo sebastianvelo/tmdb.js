@@ -1,5 +1,5 @@
-import { Episode, Movie, TVShow } from "../../common/model/film/Film";
-import { Person } from "../../common/model/person/Person";
+import { Episode, Movie, TVShow } from "../../model/film/Film";
+import { Person } from "../../model/person/Person";
 
 export type FindResponse = {
   movie_results: Movie[];

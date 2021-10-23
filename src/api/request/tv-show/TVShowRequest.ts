@@ -1,10 +1,10 @@
 import EndpointResource from "../../common/resource/EndpointResource";
 import { TVShowDetailResponse } from "../../response/tv-show/TVShowResponse";
-import Film from "../film/Film";
+import FilmRequest from "../film/FilmRequest";
 import { DetailsParams } from "../film/params/Params";
 import Endpoints from "./endpoints/Endpoints";
 
-class TVShow extends Film {
+class TVShowRequest extends FilmRequest {
   protected resource: string = EndpointResource.MOVIE;
 
   protected endpoints = { ...super.endpoints, ...Endpoints };
@@ -13,4 +13,4 @@ class TVShow extends Film {
     this.get<TVShowDetailResponse>(this.endpoints.GET_DETAILS(id), query);
 }
 
-export default TVShow;
+export default TVShowRequest;

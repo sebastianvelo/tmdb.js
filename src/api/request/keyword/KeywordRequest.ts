@@ -4,7 +4,7 @@ import { MoviesResponse } from "../../response/common/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
-class Keyword extends TMDBRequest {
+class KeywordRequest extends TMDBRequest {
   protected resource: string = EndpointResource.KEYWORD;
 
   protected endpoints = Endpoints;
@@ -16,4 +16,4 @@ class Keyword extends TMDBRequest {
     this.get<MoviesResponse>(this.endpoints.GET_MOVIES(id));
 }
 
-export default Keyword;
+export default KeywordRequest;

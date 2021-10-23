@@ -3,7 +3,7 @@ import { CreditDetailsResponse } from "../../response/credit/CreditResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
-class Credit extends TMDBRequest {
+class CreditRequest extends TMDBRequest {
   protected resource: string = EndpointResource.CREDIT;
 
   protected endpoints = Endpoints;
@@ -12,4 +12,4 @@ class Credit extends TMDBRequest {
     this.get<CreditDetailsResponse>(this.endpoints.GET_DETAILS(id));
 }
 
-export default Credit;
+export default CreditRequest;

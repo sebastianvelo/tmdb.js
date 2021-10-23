@@ -1,11 +1,11 @@
-import Company from "./request/company/Company";
-import Credit from "./request/credit/Credit";
-import Discover from "./request/discover/Discover";
-import Find from "./request/find/Find";
-import Genre from "./request/genre/Genre";
-import GuestSessions from "./request/guest-sessions/GuestSessions";
-import Keyword from "./request/keyword/Keyword";
-import Movie from "./request/movie/Movie";
+import CompanyRequest from "./request/company/CompanyRequest";
+import CreditRequest from "./request/credit/CreditRequest";
+import DiscoverRequest from "./request/discover/DiscoverRequest";
+import FindRequest from "./request/find/FindRequest";
+import GenreRequest from "./request/genre/GenreRequest";
+import GuestSessions from "./request/guest-sessions/GuestSessionRequest";
+import KeywordRequest from "./request/keyword/KeywordRequest";
+import MovieRequest from "./request/movie/MovieRequest";
 
 type TMDBVersion = "3" | "4";
 class TMDBClient {
@@ -13,33 +13,33 @@ class TMDBClient {
 
   public readonly apiKey: string;
 
-  public readonly discover: Discover;
+  public readonly discover: DiscoverRequest;
 
-  public readonly credit: Credit;
+  public readonly credit: CreditRequest;
 
-  public readonly company: Company;
+  public readonly company: CompanyRequest;
 
-  public readonly genre: Genre;
+  public readonly genre: GenreRequest;
 
-  public readonly find: Find;
+  public readonly find: FindRequest;
 
   public readonly guestSessions: GuestSessions;
 
-  public readonly keyword: Keyword;
+  public readonly keyword: KeywordRequest;
 
-  public readonly movie: Movie;
+  public readonly movie: MovieRequest;
 
   constructor(apiKey: string, version: TMDBVersion = "3") {
     this.version = version;
     this.apiKey = apiKey;
-    this.discover = new Discover(this.version, this.apiKey);
-    this.credit = new Credit(this.version, this.apiKey);
-    this.company = new Company(this.version, this.apiKey);
-    this.genre = new Genre(this.version, this.apiKey);
-    this.find = new Find(this.version, this.apiKey);
+    this.discover = new DiscoverRequest(this.version, this.apiKey);
+    this.credit = new CreditRequest(this.version, this.apiKey);
+    this.company = new CompanyRequest(this.version, this.apiKey);
+    this.genre = new GenreRequest(this.version, this.apiKey);
+    this.find = new FindRequest(this.version, this.apiKey);
     this.guestSessions = new GuestSessions(this.version, this.apiKey);
-    this.keyword = new Keyword(this.version, this.apiKey);
-    this.movie = new Movie(this.version, this.apiKey);
+    this.keyword = new KeywordRequest(this.version, this.apiKey);
+    this.movie = new MovieRequest(this.version, this.apiKey);
   }
 }
 

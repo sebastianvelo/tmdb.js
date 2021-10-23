@@ -1,11 +1,9 @@
-import { PaginableResponse, WithId } from "../CommonModels";
+import { WithId } from "../CommonModels";
 
 export interface Company extends WithId {
   logo_path?: string;
   name?: string;
 }
-
-export type Companies = PaginableResponse<Company>;
 
 export type ProductionCountry = {
   iso_3166_1?: string;

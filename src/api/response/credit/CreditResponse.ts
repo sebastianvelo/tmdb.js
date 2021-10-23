@@ -1,4 +1,4 @@
-import { WithId } from "../../common/model/CommonModels";
+import { WithId } from "../../model/CommonModels";
 
 interface Person extends WithId {
   name?: string;

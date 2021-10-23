@@ -16,7 +16,7 @@ import {
   VideosParams
 } from "./params/Params";
 
-abstract class Film extends TMDBRequest {
+abstract class FilmRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getAlternativeTitles = (id: string, query?: AlternativeTitlesParams) =>
@@ -74,4 +74,4 @@ abstract class Film extends TMDBRequest {
     this.get(this.endpoints.GET_TOP_RATED(), query);
 }
 
-export default Film;
+export default FilmRequest;
