@@ -2,7 +2,7 @@ import { FilmAlternativeTitlesResponse } from "../../response/film/FilmResponse"
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import {
-  AlternativeTitlesParams,
+  FilmAlternativeTitlesParams,
   ChangesParams,
   CreditsParams,
   ImagesParams,
@@ -19,7 +19,7 @@ import {
 abstract class FilmRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
-  public getAlternativeTitles = (id: string, query?: AlternativeTitlesParams) =>
+  public getAlternativeTitles = (id: string, query?: FilmAlternativeTitlesParams) =>
     this.get<FilmAlternativeTitlesResponse>(
       this.endpoints.GET_ALTERNATIVE_TITLES(id),
       query
@@ -31,13 +31,13 @@ abstract class FilmRequest extends TMDBRequest {
   public getCredits = (id: string, query?: CreditsParams) =>
     this.get(this.endpoints.GET_CREDITS(id), query);
 
-  public getExternalIds = (id: string) =>
+  public getExternalIds = (id: number) =>
     this.get(this.endpoints.GET_EXTERNAL_IDS(id));
 
   public getImages = (id: string, query?: ImagesParams) =>
     this.get(this.endpoints.GET_IMAGES(id), query);
 
-  public getKeywords = (id: string) =>
+  public getKeywords = (id: number) =>
     this.get(this.endpoints.GET_KEYWORDS(id));
 
   public getLists = (id: string, query?: ListsParams) =>
@@ -46,7 +46,7 @@ abstract class FilmRequest extends TMDBRequest {
   public getRecommendations = (id: string, query?: RecommendationsParams) =>
     this.get(this.endpoints.GET_RECOMMENDATIONS(id), query);
 
-  public getRelaseDates = (id: string) =>
+  public getRelaseDates = (id: number) =>
     this.get(this.endpoints.GET_RELEASE_DATES(id));
 
   public getReviews = (id: string, query?: ReviewsParams) =>
@@ -55,13 +55,13 @@ abstract class FilmRequest extends TMDBRequest {
   public getSimilars = (id: string, query?: SimilarParams) =>
     this.get(this.endpoints.GET_SIMILAR(id), query);
 
-  public getTranslations = (id: string) =>
+  public getTranslations = (id: number) =>
     this.get(this.endpoints.GET_TRANSLATIONS(id));
 
   public getVideos = (id: string, query?: VideosParams) =>
     this.get(this.endpoints.GET_VIDEOS(id), query);
 
-  public getWatchProviders = (id: string) =>
+  public getWatchProviders = (id: number) =>
     this.get(this.endpoints.GET_WATCH_PRIVDERS(id));
 
   public getLatest = (query?: LatestParams) =>

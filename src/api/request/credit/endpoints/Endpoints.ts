@@ -1,5 +1,5 @@
 const Endpoints = {
-  GET_DETAILS: (id: string) => `/${id}/`,
+  GET_DETAILS: (id: number) => `/${id}/`,
 };
 
 export default Endpoints;

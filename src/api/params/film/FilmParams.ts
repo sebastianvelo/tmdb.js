@@ -1,9 +1,9 @@
 import { LanguageParams, PageParams, RegionParams } from "../Params";
 
-export interface DetailsParams extends LanguageParams {
+export interface FilmDetailsParams extends LanguageParams {
   append_to_response?: string;
 }
-export interface AlternativeTitlesParams {
+export interface FilmAlternativeTitlesParams {
   country?: string;
 }
 export interface ChangesParams extends PageParams {
