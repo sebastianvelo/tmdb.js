@@ -1,4 +1,4 @@
-import EndpointConfig from "../../../common/endpoint/EndpointConfig";
+import EndpointConfig from "../../../../common/endpoint/EndpointConfig";
 
 const CreditEndpoints: EndpointConfig = {
     GET_DETAILS: (id: string) => `/${id}`,

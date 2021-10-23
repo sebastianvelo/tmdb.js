@@ -3,11 +3,11 @@ import EndpointConfig from './endpoint/EndpointConfig';
 import QueryParams from './params/QueryParams';
 
 abstract class APIRequest {
-    protected abstract baseURL: string;
-    protected abstract resource: string;
-    protected abstract headers: Record<string, string>;
-    protected abstract endpoints: EndpointConfig;
-    protected version: string;
+    protected abstract readonly baseURL: string;
+    protected abstract readonly resource: string;
+    protected abstract readonly headers: Record<string, string>;
+    protected abstract readonly endpoints: EndpointConfig;
+    protected readonly version: string;
 
     constructor(version: string) {
         this.version = version;
@@ -25,7 +25,6 @@ abstract class APIRequest {
     protected post<T>(url: string, params?: QueryParams): Promise<T> {
         return this.req('POST', url, params);
     }
-
 
     private getRequestConfig(method: Method, url: string, params?: QueryParams): AxiosRequestConfig {
         return ({

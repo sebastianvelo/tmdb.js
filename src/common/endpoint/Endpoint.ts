@@ -1,3 +1,3 @@
-type Endpoint = (p: any) => string;
+type Endpoint = (p?: any) => string;
 
 export default Endpoint;

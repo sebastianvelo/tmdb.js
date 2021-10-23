@@ -1,10 +1,10 @@
-import EndpointConfig from "../../common/endpoint/EndpointConfig";
-import EndpointResource from "../common/resource/EndpointResource";
-import TMDB from "../TMDB";
-import CreditEndpoints from "./endpoints/CompanyEndpoints";
+import EndpointConfig from "../../../common/endpoint/EndpointConfig";
+import EndpointResource from "../../common/resource/EndpointResource";
+import TMDBRequest from "../TMDBRequest";
+import CreditEndpoints from "./endpoints/CreditEndpoints";
 import { CreditDetails } from "./model/Credit.types";
 
-class Company extends TMDB {
+class Company extends TMDBRequest {
     protected resource: string = EndpointResource.CREDIT;
     protected endpoints: EndpointConfig = CreditEndpoints;
 

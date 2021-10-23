@@ -1,8 +1,8 @@
 import { Method } from "axios";
-import APIRequest from "../common/APIRequest";
-import QueryParams from "../common/params/QueryParams";
+import APIRequest from "../../common/APIRequest";
+import QueryParams from "../../common/params/QueryParams";
 
-abstract class TMDB extends APIRequest {
+abstract class TMDBRequest extends APIRequest {
     protected baseURL: string = 'https://api.themoviedb.org/';
     protected headers: Record<string, string> = {};
     protected apiKey: string;
@@ -18,4 +18,4 @@ abstract class TMDB extends APIRequest {
     }
 }
 
-export default TMDB;
+export default TMDBRequest;
