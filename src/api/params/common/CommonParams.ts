@@ -10,3 +10,8 @@ export interface DetailParams extends LanguageParams {
 }
 
 export interface CreditsParams extends LanguageParams {}
+
+export interface AccountStatesParams {
+  guest_session_id?: string;
+  session_id?: string;
+}

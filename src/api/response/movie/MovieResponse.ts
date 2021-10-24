@@ -1,4 +1,4 @@
 import { Movie } from "../../model/film/Film";
-import { FilmDetailResponse } from "../film/FilmResponse";
+import { FilmDetailsResponse } from "../film/FilmResponse";
 
-export interface MovieDetailResponse extends FilmDetailResponse, Movie {};
+export interface MovieDetailsResponse extends FilmDetailsResponse, Movie {};

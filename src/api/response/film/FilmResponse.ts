@@ -3,7 +3,7 @@ import { ProductionCompany, ProductionCountry } from "../../model/company/Compan
 import { SpokenLanguage, MovieStatus, AlternativeTitle } from "../../model/film/Film";
 import { Genre } from "../../model/genre/Genre";
 
-export interface FilmDetailResponse {
+export interface FilmDetailsResponse {
   budget?: number;
   genres?: Genre[];
   homepage?: string | null;

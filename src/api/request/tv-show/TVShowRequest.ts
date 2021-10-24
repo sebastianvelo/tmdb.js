@@ -1,6 +1,6 @@
-import { DetailParams } from "../../params/common/CommonParams";
+import { AccountStatesParams, DetailParams } from "../../params/common/CommonParams";
 import EndpointResource from "../../resource/EndpointResource";
-import { TVShowDetailResponse } from "../../response/tv-show/TVShowResponse";
+import { TVShowDetailsResponse } from "../../response/tv-show/TVShowResponse";
 import FilmRequest from "../film/FilmRequest";
 import Endpoints from "./endpoints/Endpoints";
 
@@ -10,9 +10,9 @@ class TVShowRequest extends FilmRequest {
   protected endpoints = { ...super.endpoints, ...Endpoints };
 
   public getDetails = (id: number, query?: DetailParams) =>
-    this.get<TVShowDetailResponse>(this.endpoints.GET_DETAILS(id), query);
+    this.get<TVShowDetailsResponse>(this.endpoints.GET_DETAILS(id), query);
 
-  public getAccountStates = (id: number, query?: any) =>
+  public getAccountStates = (id: number, query?: AccountStatesParams) =>
     this.get(this.endpoints.GET_ACCOUNT_STATES(id), query);
 
   public getAggregateCredits = (id: number, query?: any) =>

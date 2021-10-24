@@ -1,3 +1,3 @@
-type EndpointPath = (p?: any) => string;
+type EndpointPath = (...params: any[]) => string;
 
 export default EndpointPath;

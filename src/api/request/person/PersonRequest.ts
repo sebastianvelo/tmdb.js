@@ -11,6 +11,12 @@ import {
   TranslationsParams
 } from "../../params/person/PersonParams";
 import EndpointResource from "../../resource/EndpointResource";
+import {
+  ChangesResponse,
+  CreditsResponse,
+  ExternalIDsResponse,
+  ImagesResponse
+} from "../../response/common/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
@@ -23,21 +29,22 @@ class PersonRequest extends TMDBRequest {
     this.get(this.endpoints.GET_DETAILS(id), query);
 
   public getChanges = (id: number, query?: ChangesParams) =>
-    this.get(this.endpoints.GET_CHANGES(id), query);
+    this.get<ChangesResponse>(this.endpoints.GET_CHANGES(id), query);
 
   public getTVShowCredits = (id: number, query?: CreditsParams) =>
-    this.get(this.endpoints.GET_TV_CREDITS(id), query);
+    this.get<CreditsResponse>(this.endpoints.GET_TV_CREDITS(id), query);
 
   public getMovieCredits = (id: number, query?: CreditsParams) =>
-    this.get(this.endpoints.GET_MOVIE_CREDITS(id), query);
+    this.get<CreditsResponse>(this.endpoints.GET_MOVIE_CREDITS(id), query);
 
   public getCombinedCredits = (id: number, query?: CreditsParams) =>
-    this.get(this.endpoints.GET_COMBINED_CREDITS(id), query);
+    this.get<CreditsResponse>(this.endpoints.GET_COMBINED_CREDITS(id), query);
 
   public getExternalIds = (id: number, query?: ExternalIdParams) =>
-    this.get(this.endpoints.GET_EXTERNAL_IDS(id), query);
+    this.get<ExternalIDsResponse>(this.endpoints.GET_EXTERNAL_IDS(id), query);
 
-  public getImages = (id: number) => this.get(this.endpoints.GET_IMAGES(id));
+  public getImages = (id: number) =>
+    this.get<ImagesResponse>(this.endpoints.GET_IMAGES(id));
 
   public getTaggedImages = (id: number, query?: TaggedImagesParams) =>
     this.get(this.endpoints.GET_TAGGED_IMAGES(id), query);
