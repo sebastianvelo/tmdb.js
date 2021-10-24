@@ -5,7 +5,7 @@ import FilmRequest from "../film/FilmRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class TVShowRequest extends FilmRequest {
-  protected resource = EndpointResource.MOVIE;
+  protected resource = EndpointResource.TV;
 
   protected endpoints = { ...super.endpoints, ...Endpoints };
 
@@ -32,6 +32,7 @@ class TVShowRequest extends FilmRequest {
 
   public getOnTheAir = (query?: any) =>
     this.get(this.endpoints.GET_ON_THE_AIR(), query);
+
 }
 
 export default TVShowRequest;

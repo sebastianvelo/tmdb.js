@@ -12,6 +12,8 @@ enum EndpointResource {
   SEARCH = "/search",
   PERSON = "/person",
   REVIEW = "/review",
+  TV = "/tv",
+  WATCH_PROVIDER = "/watch/provider"
 }
 
 export default EndpointResource;
