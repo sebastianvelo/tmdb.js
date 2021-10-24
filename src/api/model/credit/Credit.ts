@@ -1,12 +1,8 @@
 import { TMDBEntity } from "../CommonModels";
+import { Season } from "../season/Season";
 
 export interface Person extends TMDBEntity {
   name?: string;
-}
-export interface Season {
-  air_date: string;
-  poster_path: string;
-  season_number: number;
 }
 export interface Media extends TMDBEntity {
   name: string;
@@ -14,4 +10,22 @@ export interface Media extends TMDBEntity {
   character: string;
   episodes: any[];
   seasons: Season[];
+}
+
+export interface CreditPerson extends TMDBEntity {
+  adult?: boolean;
+  gender?: number | null;
+  known_for_department?: string;
+  name?: string;
+  original_name?: string;
+  popularity?: number;
+  profile_path?: string | null;
+  cast_id?: number;
+  character?: string;
+  credit_id?: string;
+  order?: number;
+}
+export interface CrewPerson extends CreditPerson {
+  department?: string;
+  job?: string;
 }

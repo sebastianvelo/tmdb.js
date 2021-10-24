@@ -1,6 +1,6 @@
 import { TMDBEntity } from "../../model/CommonModels";
 import { Company } from "../../model/company/Company";
-import { Logo } from "../../model/logo/Logo";
+import { Image } from "../../model/image/Image";
 
 export interface CompanyDetailsResponse extends Company {
   description?: string;
@@ -18,5 +18,5 @@ export interface CompanyAlternativeNames extends TMDBEntity {
 };
 
 export interface CompanyImagesResponse extends TMDBEntity {
-  logos: Logo[];
+  logos: Image[];
 };

@@ -1,6 +1,23 @@
-import { AccountStatesParams, DetailParams } from "../../params/common/CommonParams";
+import {
+  AccountStatesParams,
+  DetailParams
+} from "../../params/common/CommonParams";
+import {
+  LatestParams,
+  PopularParams,
+  RecommendationsParams,
+  SimilarParams,
+  TopRatedParams
+} from "../../params/film/FilmParams";
 import EndpointResource from "../../resource/EndpointResource";
-import { TVShowDetailsResponse } from "../../response/tv-show/TVShowResponse";
+import {
+  AccountStatesResponse,
+  TVShowsResponse
+} from "../../response/common/CommonResponse";
+import {
+  TVShowDetailsResponse,
+  TVShowTranslationsResponse
+} from "../../response/tv-show/TVShowResponse";
 import FilmRequest from "../film/FilmRequest";
 import Endpoints from "./endpoints/Endpoints";
 
@@ -13,7 +30,10 @@ class TVShowRequest extends FilmRequest {
     this.get<TVShowDetailsResponse>(this.endpoints.GET_DETAILS(id), query);
 
   public getAccountStates = (id: number, query?: AccountStatesParams) =>
-    this.get(this.endpoints.GET_ACCOUNT_STATES(id), query);
+    this.get<AccountStatesResponse>(
+      this.endpoints.GET_ACCOUNT_STATES(id),
+      query
+    );
 
   public getAggregateCredits = (id: number, query?: any) =>
     this.get(this.endpoints.GET_AGGREGATE_CREDITS(id), query);
@@ -24,15 +44,32 @@ class TVShowRequest extends FilmRequest {
   public getEpisodeGroups = (id: number, query?: any) =>
     this.get(this.endpoints.GET_EPISODE_GROUPS(id), query);
 
+  public getShowTranslations = (id: number) =>
+    super.getTranslations<TVShowTranslationsResponse>(id);
+
   public getScreenedTheatrically = (id: number) =>
-    this.get(this.endpoints.GET_SCREENED_THEATRICALLY(id));
+    this.get<TVShowsResponse>(this.endpoints.GET_SCREENED_THEATRICALLY(id));
 
   public getAiringToday = (query?: any) =>
-    this.get(this.endpoints.GET_AIRING_TODAY(), query);
+    this.get<TVShowsResponse>(this.endpoints.GET_AIRING_TODAY(), query);
 
   public getOnTheAir = (query?: any) =>
-    this.get(this.endpoints.GET_ON_THE_AIR(), query);
+    this.get<TVShowsResponse>(this.endpoints.GET_ON_THE_AIR(), query);
 
+  protected getSimilarShows = (id: number, query?: SimilarParams) =>
+    super.getSimilars<TVShowsResponse>(id, query);
+
+  public getLatestShows = (query?: LatestParams) =>
+    super.getLatest<TVShowsResponse>(query);
+
+  public getPopularShows = (query?: PopularParams) =>
+    super.getPopular<TVShowsResponse>(query);
+
+  public getTopRatedShows = (query?: TopRatedParams) =>
+    super.getTopRated<TVShowsResponse>(query);
+
+  public getTVRecommendations = (id: number, query?: RecommendationsParams) =>
+    super.getRecommendations<TVShowsResponse>(id, query);
 }
 
 export default TVShowRequest;

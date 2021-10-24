@@ -1,13 +1,12 @@
-import { TMDBEntity } from "../CommonModels";
+import { Language } from "../CommonModels";
 
-interface ChangeItem extends TMDBEntity {
+interface ChangeItem extends Language {
     action?: string;
     time?: string;
     value?: {
         episode_id?: number;
         episode_number?: number;
     };
-    iso_639_1?: string;
     original_value?: string;
 }
 

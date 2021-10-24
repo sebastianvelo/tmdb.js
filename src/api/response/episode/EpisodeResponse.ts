@@ -1,5 +1,5 @@
-import { Character, GuestStar } from "../../model/episode/Episode";
-import { Episode } from "../../model/film/Film";
+import { TranslationsResponse } from "../../model/CommonModels";
+import { Character, Episode, GuestStar } from "../../model/episode/Episode";
 import { AccountStatesResponse } from "../common/CommonResponse";
 
 export interface EpisodeDetailsResponse extends Episode {
@@ -7,6 +7,8 @@ export interface EpisodeDetailsResponse extends Episode {
   guest_stars?: GuestStar[];
 }
 
-export interface EpisodeAccountStatesResponse extends AccountStatesResponse {
-  
-}
+export interface EpisodeAccountStatesResponse extends AccountStatesResponse {}
+
+export type EpisodeTranslationsResponse = TranslationsResponse<{
+  biography?: string;
+}>;

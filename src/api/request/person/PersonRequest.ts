@@ -15,8 +15,14 @@ import {
   ChangesResponse,
   CreditsResponse,
   ExternalIDsResponse,
-  ImagesResponse
+  ImageListResponse,
+  ImagesResponse,
+  PeopleResponse
 } from "../../response/common/CommonResponse";
+import {
+  PersonDetailsResponse,
+  PersonTranslationsResponse
+} from "../../response/person/PersonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
@@ -26,7 +32,7 @@ class PersonRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number, query?: DetailParams) =>
-    this.get(this.endpoints.GET_DETAILS(id), query);
+    this.get<PersonDetailsResponse>(this.endpoints.GET_DETAILS(id), query);
 
   public getChanges = (id: number, query?: ChangesParams) =>
     this.get<ChangesResponse>(this.endpoints.GET_CHANGES(id), query);
@@ -47,15 +53,18 @@ class PersonRequest extends TMDBRequest {
     this.get<ImagesResponse>(this.endpoints.GET_IMAGES(id));
 
   public getTaggedImages = (id: number, query?: TaggedImagesParams) =>
-    this.get(this.endpoints.GET_TAGGED_IMAGES(id), query);
+    this.get<ImageListResponse>(this.endpoints.GET_TAGGED_IMAGES(id), query);
 
   public getTranslations = (id: number, query?: TranslationsParams) =>
-    this.get(this.endpoints.GET_TRANSLATIONS(id), query);
+    this.get<PersonTranslationsResponse>(
+      this.endpoints.GET_TRANSLATIONS(id),
+      query
+    );
 
   public getLatest = (query?: LatestParams) =>
-    this.get(this.endpoints.GET_LATEST(), query);
+    this.get<PersonDetailsResponse>(this.endpoints.GET_LATEST(), query);
 
   public getPopular = (query?: PopularParams) =>
-    this.get(this.endpoints.GET_POPULAR(), query);
+    this.get<PeopleResponse>(this.endpoints.GET_POPULAR(), query);
 }
 export default PersonRequest;

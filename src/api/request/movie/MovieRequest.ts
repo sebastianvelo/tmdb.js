@@ -1,7 +1,24 @@
 import { DetailParams } from "../../params/common/CommonParams";
-import { NowPlayingParams, UpcomingParams } from "../../params/film/FilmParams";
+import {
+  LatestParams,
+  ListsParams,
+  NowPlayingParams,
+  PopularParams,
+  RecommendationsParams,
+  SimilarParams,
+  TopRatedParams,
+  UpcomingParams
+} from "../../params/film/FilmParams";
 import EndpointResource from "../../resource/EndpointResource";
-import { MovieDetailsResponse } from "../../response/movie/MovieResponse";
+import {
+  MoviesResponse,
+  TVShowsResponse
+} from "../../response/common/CommonResponse";
+import {
+  MovieDetailsResponse,
+  MovieReleaseDatesResponse,
+  MovieTranslationsResponse
+} from "../../response/movie/MovieResponse";
 import FilmRequest from "../film/FilmRequest";
 import Endpoints from "./endpoints/Endpoints";
 
@@ -14,10 +31,37 @@ class MovieRequest extends FilmRequest {
     this.get<MovieDetailsResponse>(this.endpoints.GET_DETAILS(id), query);
 
   public getNowPlaying = (query?: NowPlayingParams) =>
-    this.get(this.endpoints.GET_NOW_PLAYING(), query);
+    this.get<MoviesResponse>(this.endpoints.GET_NOW_PLAYING(), query);
 
   public getUpcoming = (query?: UpcomingParams) =>
-    this.get(this.endpoints.GET_UPCOMING(), query);
+    this.get<MoviesResponse>(this.endpoints.GET_UPCOMING(), query);
+
+  public getRelaseDates = (id: number) =>
+    this.get<MovieReleaseDatesResponse>(this.endpoints.GET_RELEASE_DATES(id));
+    
+  public getMovieRecommendations = (
+    id: number,
+    query?: RecommendationsParams
+  ) => super.getRecommendations<MoviesResponse>(id, query);
+
+  protected getSimilarShows = (id: number, query?: SimilarParams) =>
+    super.getSimilars<MoviesResponse>(id, query);
+
+  protected getLatestShows = (query?: LatestParams) =>
+    super.getLatest<MoviesResponse>(query);
+
+  protected getPopularShows = (query?: PopularParams) =>
+    super.getPopular<MoviesResponse>(query);
+
+  protected getTopRatedShows = (query?: TopRatedParams) =>
+    super.getTopRated<TVShowsResponse>(query);
+
+  public getShowTranslations = (id: number) =>
+    super.getTranslations<MovieTranslationsResponse>(id);
+
+
+  public getLists = (id: number, query?: ListsParams) =>
+  this.get(this.endpoints.GET_LISTS(id), query);
 }
 
 export default MovieRequest;

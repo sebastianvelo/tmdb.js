@@ -2,9 +2,7 @@ import { ChangesParams, CreditsParams } from "../../params/common/CommonParams";
 import {
   FilmAlternativeTitlesParams,
   ImagesParams,
-  LatestParams,
-  ListsParams,
-  PopularParams,
+  LatestParams, PopularParams,
   RecommendationsParams,
   ReviewsParams,
   SimilarParams,
@@ -15,7 +13,10 @@ import {
   ChangesResponse,
   CreditsResponse,
   ExternalIDsResponse,
-  ImagesResponse
+  ImagesResponse,
+  KeywordsResponse,
+  ReviewsResponse,
+  VideosResponse
 } from "../../response/common/CommonResponse";
 import { FilmAlternativeTitlesResponse } from "../../response/film/FilmResponse";
 import TMDBRequest from "../TMDBRequest";
@@ -46,40 +47,36 @@ abstract class FilmRequest extends TMDBRequest {
     this.get<ImagesResponse>(this.endpoints.GET_IMAGES(id), query);
 
   public getKeywords = (id: number) =>
-    this.get(this.endpoints.GET_KEYWORDS(id));
-
-  public getLists = (id: number, query?: ListsParams) =>
-    this.get(this.endpoints.GET_LISTS(id), query);
-
-  public getRecommendations = (id: number, query?: RecommendationsParams) =>
-    this.get(this.endpoints.GET_RECOMMENDATIONS(id), query);
-
-  public getRelaseDates = (id: number) =>
-    this.get(this.endpoints.GET_RELEASE_DATES(id));
+    this.get<KeywordsResponse>(this.endpoints.GET_KEYWORDS(id));
 
   public getReviews = (id: number, query?: ReviewsParams) =>
-    this.get(this.endpoints.GET_REVIEWS(id), query);
-
-  public getSimilars = (id: number, query?: SimilarParams) =>
-    this.get(this.endpoints.GET_SIMILAR(id), query);
-
-  public getTranslations = (id: number) =>
-    this.get(this.endpoints.GET_TRANSLATIONS(id));
+    this.get<ReviewsResponse>(this.endpoints.GET_REVIEWS(id), query);
 
   public getVideos = (id: number, query?: VideosParams) =>
-    this.get(this.endpoints.GET_VIDEOS(id), query);
+    this.get<VideosResponse>(this.endpoints.GET_VIDEOS(id), query);
 
   public getWatchProviders = (id: number) =>
     this.get(this.endpoints.GET_WATCH_PRIVDERS(id));
 
-  public getLatest = (query?: LatestParams) =>
-    this.get(this.endpoints.GET_LATEST(), query);
+  public getTranslations = <T>(id: number) =>
+    this.get<T>(this.endpoints.GET_TRANSLATIONS(id));
 
-  public getPopular = (query?: PopularParams) =>
-    this.get(this.endpoints.GET_POPULAR(), query);
+  protected getRecommendations = <T>(
+    id: number,
+    query?: RecommendationsParams
+  ) => this.get<T>(this.endpoints.GET_RECOMMENDATIONS(id), query);
 
-  public getTopRated = (query?: TopRatedParams) =>
-    this.get(this.endpoints.GET_TOP_RATED(), query);
+  protected getSimilars = <T>(id: number, query?: SimilarParams) =>
+    this.get<T>(this.endpoints.GET_SIMILAR(id), query);
+
+  public getLatest = <T>(query?: LatestParams) =>
+    this.get<T>(this.endpoints.GET_LATEST(), query);
+
+  public getPopular = <T>(query?: PopularParams) =>
+    this.get<T>(this.endpoints.GET_POPULAR(), query);
+
+  public getTopRated = <T>(query?: TopRatedParams) =>
+    this.get<T>(this.endpoints.GET_TOP_RATED(), query);
 }
 
 export default FilmRequest;

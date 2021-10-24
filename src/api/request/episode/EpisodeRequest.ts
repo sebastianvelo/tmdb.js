@@ -14,7 +14,8 @@ import {
 } from "../../response/common/CommonResponse";
 import {
   EpisodeAccountStatesResponse,
-  EpisodeDetailsResponse
+  EpisodeDetailsResponse,
+  EpisodeTranslationsResponse
 } from "../../response/episode/EpisodeResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
@@ -81,7 +82,7 @@ class EpisodeRequest extends TMDBRequest {
   ) => this.get<ImagesResponse>(this.endpoints.GET_IMAGES(id, season, episode), query);
 
   public getTranslations = (id: number, season: number, episode: number) =>
-    this.get(this.endpoints.GET_TRANSLATIONS(id, season, episode));
+    this.get<EpisodeTranslationsResponse>(this.endpoints.GET_TRANSLATIONS(id, season, episode));
 
   public getVideos = (
     id: number,
