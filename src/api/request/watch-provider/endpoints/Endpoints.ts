@@ -1,7 +1,7 @@
 const Endpoints = {
-    GET_AVAILABLE_REGIONS: () => `/regions`,
-    GET_MOVIE_PROVIDERS: () => `/movie`,
-    GET_TV_PROVIDERS: () => `/tv`,
+    getAvailableRegions: () => `/regions`,
+    getMovieProviders: () => `/movie`,
+    getTVProviders: () => `/tv`,
 };
 
 export default Endpoints;

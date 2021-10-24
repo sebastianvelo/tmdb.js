@@ -28,16 +28,16 @@ class MovieRequest extends FilmRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number, query?: DetailParams) =>
-    this.get<MovieDetailsResponse>(this.endpoints.GET_DETAILS(id), query);
+    this.get<MovieDetailsResponse>(this.endpoints.getDetails(id), query);
 
   public getNowPlaying = (query?: NowPlayingParams) =>
-    this.get<MoviesResponse>(this.endpoints.GET_NOW_PLAYING(), query);
+    this.get<MoviesResponse>(this.endpoints.getNowPlaying(), query);
 
   public getUpcoming = (query?: UpcomingParams) =>
-    this.get<MoviesResponse>(this.endpoints.GET_UPCOMING(), query);
+    this.get<MoviesResponse>(this.endpoints.getUpcoming(), query);
 
   public getRelaseDates = (id: number) =>
-    this.get<MovieReleaseDatesResponse>(this.endpoints.GET_RELEASE_DATES(id));
+    this.get<MovieReleaseDatesResponse>(this.endpoints.getReleaseDates(id));
 
   public getMovieRecommendations = (
     id: number,
@@ -60,7 +60,7 @@ class MovieRequest extends FilmRequest {
     super.getTranslations<MovieTranslationsResponse>(id);
 
   public getLists = (id: number, query?: ListsParams) =>
-    this.get(this.endpoints.GET_LISTS(id), query);
+    this.get(this.endpoints.getLists(id), query);
 }
 
 export default MovieRequest;

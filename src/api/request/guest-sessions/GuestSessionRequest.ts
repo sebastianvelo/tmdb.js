@@ -10,13 +10,13 @@ class GuestSessionRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public movies = (guest_session_id: string, query?: GuestSessionParams) =>
-    this.get<MoviesResponse>(this.endpoints.MOVIES(guest_session_id), query);
+    this.get<MoviesResponse>(this.endpoints.movies(guest_session_id), query);
 
   public tvShows = (guest_session_id: string, query?: GuestSessionParams) =>
-    this.get<TVShowsResponse>(this.endpoints.TV_SHOWS(guest_session_id), query);
+    this.get<TVShowsResponse>(this.endpoints.tvShows(guest_session_id), query);
 
   public episodes = (guest_session_id: string, query?: GuestSessionParams) =>
-    this.get<EpisodesResponse>(this.endpoints.EPISODES(guest_session_id), query);
+    this.get<EpisodesResponse>(this.endpoints.episodes(guest_session_id), query);
 }
 
 export default GuestSessionRequest;

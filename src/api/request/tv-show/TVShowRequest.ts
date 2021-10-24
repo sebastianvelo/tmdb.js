@@ -27,34 +27,34 @@ class TVShowRequest extends FilmRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number, query?: DetailParams) =>
-    this.get<TVShowDetailsResponse>(this.endpoints.GET_DETAILS(id), query);
+    this.get<TVShowDetailsResponse>(this.endpoints.getDetails(id), query);
 
   public getAccountStates = (id: number, query?: AccountStatesParams) =>
     this.get<AccountStatesResponse>(
-      this.endpoints.GET_ACCOUNT_STATES(id),
+      this.endpoints.getAccountStates(id),
       query
     );
 
   public getAggregateCredits = (id: number, query?: any) =>
-    this.get(this.endpoints.GET_AGGREGATE_CREDITS(id), query);
+    this.get(this.endpoints.getAggregateCredits(id), query);
 
   public getContentRatings = (id: number, query?: any) =>
-    this.get(this.endpoints.GET_CONTENT_RATINGS(id), query);
+    this.get(this.endpoints.getContentRatings(id), query);
 
   public getEpisodeGroups = (id: number, query?: any) =>
-    this.get(this.endpoints.GET_EPISODE_GROUPS(id), query);
+    this.get(this.endpoints.getEpisodeGroups(id), query);
 
   public getShowTranslations = (id: number) =>
     super.getTranslations<TVShowTranslationsResponse>(id);
 
   public getScreenedTheatrically = (id: number) =>
-    this.get<TVShowsResponse>(this.endpoints.GET_SCREENED_THEATRICALLY(id));
+    this.get<TVShowsResponse>(this.endpoints.getScreenedTheatrically(id));
 
   public getAiringToday = (query?: any) =>
-    this.get<TVShowsResponse>(this.endpoints.GET_AIRING_TODAY(), query);
+    this.get<TVShowsResponse>(this.endpoints.getAiringToday(), query);
 
   public getOnTheAir = (query?: any) =>
-    this.get<TVShowsResponse>(this.endpoints.GET_ON_THE_AIR(), query);
+    this.get<TVShowsResponse>(this.endpoints.getOnTheAir(), query);
 
   protected getSimilarShows = (id: number, query?: SimilarParams) =>
     super.getSimilars<TVShowsResponse>(id, query);

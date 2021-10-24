@@ -14,19 +14,19 @@ class WatchProviderRequest extends TMDBRequest {
 
   public getAvailableRegions = (params?: WatchProviderParams) =>
     this.get<RegionsWatchProvidersResponse>(
-      this.endpoints.GET_AVAILABLE_REGIONS(),
+      this.endpoints.getAvailableRegions(),
       params
     );
 
   public getMovieProviders = (params?: WatchProviderParams) =>
     this.get<FilmWatchProvidersResponse>(
-      this.endpoints.GET_MOVIE_PROVIDERS(),
+      this.endpoints.getMovieProviders(),
       params
     );
 
   public getTVProviders = (params?: WatchProviderParams) =>
     this.get<FilmWatchProvidersResponse>(
-      this.endpoints.GET_TV_PROVIDERS(),
+      this.endpoints.getTVProviders(),
       params
     );
 }

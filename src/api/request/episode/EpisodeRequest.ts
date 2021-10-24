@@ -32,7 +32,7 @@ class EpisodeRequest extends TMDBRequest {
     query?: DetailParams
   ) =>
     this.get<EpisodeDetailsResponse>(
-      this.endpoints.GET_DETAILS(id, season, episode),
+      this.endpoints.getDetails(id, season, episode),
       query
     );
 
@@ -43,7 +43,7 @@ class EpisodeRequest extends TMDBRequest {
     query?: AccountStatesParams
   ) =>
     this.get<EpisodeAccountStatesResponse>(
-      this.endpoints.GET_ACCOUNT_STATES(id, season, episode),
+      this.endpoints.getAccountStates(id, season, episode),
       query
     );
 
@@ -54,7 +54,7 @@ class EpisodeRequest extends TMDBRequest {
     query?: ChangesParams
   ) =>
     this.get<ChangesResponse>(
-      this.endpoints.GET_CHANGES(id, season, episode),
+      this.endpoints.getChanges(id, season, episode),
       query
     );
 
@@ -65,13 +65,13 @@ class EpisodeRequest extends TMDBRequest {
     query?: CreditsParams
   ) =>
     this.get<CreditsResponse>(
-      this.endpoints.GET_CREDITS(id, season, episode),
+      this.endpoints.getCredits(id, season, episode),
       query
     );
 
   public getExternalIds = (id: number, season: number, episode: number) =>
     this.get<ExternalIDsResponse>(
-      this.endpoints.GET_EXTERNAL_IDS(id, season, episode)
+      this.endpoints.getExternalIDs(id, season, episode)
     );
 
   public getImages = (
@@ -79,17 +79,17 @@ class EpisodeRequest extends TMDBRequest {
     season: number,
     episode: number,
     query?: ImagesParams
-  ) => this.get<ImagesResponse>(this.endpoints.GET_IMAGES(id, season, episode), query);
+  ) => this.get<ImagesResponse>(this.endpoints.getImages(id, season, episode), query);
 
   public getTranslations = (id: number, season: number, episode: number) =>
-    this.get<EpisodeTranslationsResponse>(this.endpoints.GET_TRANSLATIONS(id, season, episode));
+    this.get<EpisodeTranslationsResponse>(this.endpoints.getTranslations(id, season, episode));
 
   public getVideos = (
     id: number,
     season: number,
     episode: number,
     query?: VideosParams
-  ) => this.get(this.endpoints.GET_VIDEOS(id, season, episode), query);
+  ) => this.get(this.endpoints.getVideos(id, season, episode), query);
 }
 
 export default EpisodeRequest;

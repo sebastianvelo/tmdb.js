@@ -28,7 +28,7 @@ class SeasonRequest extends TMDBRequest {
 
   public getDetails = (id: number, season: number, query?: DetailParams) =>
     this.get<SeasonDetailsResponse>(
-      this.endpoints.GET_DETAILS(id, season),
+      this.endpoints.getDetails(id, season),
       query
     );
 
@@ -38,29 +38,29 @@ class SeasonRequest extends TMDBRequest {
     query?: AccountStatesParams
   ) =>
     this.get<SeasonAccountStatesResponse>(
-      this.endpoints.GET_ACCOUNT_STATES(id, season),
+      this.endpoints.getAccountStates(id, season),
       query
     );
 
   public getChanges = (id: number, season: number, query?: ChangesParams) =>
-    this.get<ChangesResponse>(this.endpoints.GET_CHANGES(id, season), query);
+    this.get<ChangesResponse>(this.endpoints.getChanges(id, season), query);
 
   public getCredits = (id: number, season: number, query?: CreditsParams) =>
-    this.get<CreditsResponse>(this.endpoints.GET_CREDITS(id, season), query);
+    this.get<CreditsResponse>(this.endpoints.getCredits(id, season), query);
 
   public getExternalIds = (id: number, season: number) =>
-    this.get<ExternalIDsResponse>(this.endpoints.GET_EXTERNAL_IDS(id, season));
+    this.get<ExternalIDsResponse>(this.endpoints.getExternalIDs(id, season));
 
   public getImages = (id: number, season: number, query?: ImagesParams) =>
-    this.get<ImagesResponse>(this.endpoints.GET_IMAGES(id, season), query);
+    this.get<ImagesResponse>(this.endpoints.getImages(id, season), query);
 
   public getTranslations = (id: number, season: number) =>
     this.get<SeasonTranslationsResponse>(
-      this.endpoints.GET_TRANSLATIONS(id, season)
+      this.endpoints.getTranslations(id, season)
     );
 
   public getVideos = (id: number, season: number, query?: VideosParams) =>
-    this.get<VideosResponse>(this.endpoints.GET_VIDEOS(id, season), query);
+    this.get<VideosResponse>(this.endpoints.getVideos(id, season), query);
 }
 
 export default SeasonRequest;

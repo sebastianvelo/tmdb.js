@@ -1,6 +1,6 @@
 const Endpoints = {
-  TV_SHOWS: () => "/tv/list",
-  MOVIES: () => "/movie/list"
+  getTVGenres: () => "/tv/list",
+  getMovieGenres: () => "/movie/list"
 };
 
 export default Endpoints;

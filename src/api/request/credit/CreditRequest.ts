@@ -9,7 +9,7 @@ class CreditRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number) =>
-    this.get<CreditDetailsResponse>(this.endpoints.GET_DETAILS(id));
+    this.get<CreditDetailsResponse>(this.endpoints.getDetails(id));
 }
 
 export default CreditRequest;

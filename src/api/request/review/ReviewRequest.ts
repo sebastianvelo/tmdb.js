@@ -9,7 +9,7 @@ class ReviewRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number) =>
-    this.get<ReviewDetailsResponse>(this.endpoints.GET_DETAILS(id));
+    this.get<ReviewDetailsResponse>(this.endpoints.getDetails(id));
 
 }
 

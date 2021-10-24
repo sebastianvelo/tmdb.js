@@ -10,10 +10,10 @@ class KeywordRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number) =>
-    this.get<KeywordDetailResponse>(this.endpoints.GET_DETAILS(id));
+    this.get<KeywordDetailResponse>(this.endpoints.getDetails(id));
 
   public getMovies = (id: number) =>
-    this.get<MoviesResponse>(this.endpoints.GET_MOVIES(id));
+    this.get<MoviesResponse>(this.endpoints.getMovies(id));
 }
 
 export default KeywordRequest;

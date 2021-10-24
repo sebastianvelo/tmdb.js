@@ -9,13 +9,13 @@ class CompanyRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number) =>
-    this.get<CompanyDetailsResponse>(this.endpoints.GET_DETAILS(id));
+    this.get<CompanyDetailsResponse>(this.endpoints.getDetails(id));
 
   public getAlternativeNames = (id: number) =>
-    this.get<CompanyAlternativeNames>(this.endpoints.GET_ALTERNATIVE_NAMES(id));
+    this.get<CompanyAlternativeNames>(this.endpoints.getAlternativeNames(id));
 
   public getImages = (id: number) =>
-    this.get<CompanyImagesResponse>(this.endpoints.GET_IMAGES(id));
+    this.get<CompanyImagesResponse>(this.endpoints.getImages(id));
 }
 
 export default CompanyRequest;

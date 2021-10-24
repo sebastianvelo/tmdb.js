@@ -10,16 +10,16 @@ class TrendingRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getAll = (timeWindow: TimeWindow) =>
-    this.get<AllMediaTypesResponse>(this.endpoints.GET_ALL(timeWindow));
+    this.get<AllMediaTypesResponse>(this.endpoints.getAll(timeWindow));
 
   public getMovies = (timeWindow: TimeWindow) =>
-    this.get<MoviesResponse>(this.endpoints.GET_MOVIES(timeWindow));
+    this.get<MoviesResponse>(this.endpoints.getMovies(timeWindow));
 
   public getTVShows = (timeWindow: TimeWindow) =>
-    this.get<TVShowsResponse>(this.endpoints.GET_TVSHOWS(timeWindow));
+    this.get<TVShowsResponse>(this.endpoints.getTVShows(timeWindow));
 
   public getPeople = (timeWindow: TimeWindow) =>
-    this.get<PeopleResponse>(this.endpoints.GET_PEOPLE(timeWindow));
+    this.get<PeopleResponse>(this.endpoints.getPeople(timeWindow));
 }
 
 export default TrendingRequest;

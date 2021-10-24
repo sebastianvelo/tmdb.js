@@ -10,10 +10,10 @@ class DiscoverRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public movies = (query?: DiscoverParams) =>
-    this.get<MoviesResponse>(this.endpoints.MOVIES(), query);
+    this.get<MoviesResponse>(this.endpoints.movies(), query);
 
   public tvShows = (query?: DiscoverParams) =>
-    this.get<TVShowsResponse>(this.endpoints.TV_SHOWS(), query);
+    this.get<TVShowsResponse>(this.endpoints.tvShows(), query);
 }
 
 export default DiscoverRequest;

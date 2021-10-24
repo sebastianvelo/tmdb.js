@@ -10,10 +10,10 @@ class GenreRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getTVGenres = (query?: GenreParams) =>
-    this.get<GenresResponse>(this.endpoints.TV_SHOWS(), query);
+    this.get<GenresResponse>(this.endpoints.getTVGenres(), query);
 
   public getMovieGenres = (query?: GenreParams) =>
-    this.get<GenresResponse>(this.endpoints.MOVIES(), query);
+    this.get<GenresResponse>(this.endpoints.getMovieGenres(), query);
 }
 
 export default GenreRequest;
