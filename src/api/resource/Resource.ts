@@ -1,4 +1,4 @@
-enum EndpointResource {
+enum Resource {
   COMPANY = "/company",
   CREDIT = "/credit",
   DISCOVER = "/discover",
@@ -16,4 +16,4 @@ enum EndpointResource {
   WATCH_PROVIDER = "/watch/provider"
 }
 
-export default EndpointResource;
+export default Resource;

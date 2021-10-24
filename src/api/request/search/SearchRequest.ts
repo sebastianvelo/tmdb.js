@@ -1,11 +1,11 @@
 import { TimeWindow } from "../../model/trending/Trending";
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import { AllMediaTypesResponse, MoviesResponse, PeopleResponse, TVShowsResponse } from "../../common/response/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class SearchRequest extends TMDBRequest {
-  protected resource = EndpointResource.SEARCH;
+  protected resource = Resource.SEARCH;
 
   protected endpoints = Endpoints;
 

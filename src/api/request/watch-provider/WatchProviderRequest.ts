@@ -1,4 +1,4 @@
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { WatchProviderParams } from "./params/Params";
@@ -8,7 +8,7 @@ import {
 } from "./response/Response";
 
 class WatchProviderRequest extends TMDBRequest {
-  protected resource = EndpointResource.WATCH_PROVIDER;
+  protected resource = Resource.WATCH_PROVIDER;
 
   protected endpoints = Endpoints;
 

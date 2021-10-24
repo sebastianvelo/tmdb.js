@@ -1,11 +1,11 @@
 import { KeywordDetailResponse } from "./response/Response";
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import { MoviesResponse } from "../../common/response/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class KeywordRequest extends TMDBRequest {
-  protected resource = EndpointResource.KEYWORD;
+  protected resource = Resource.KEYWORD;
 
   protected endpoints = Endpoints;
 

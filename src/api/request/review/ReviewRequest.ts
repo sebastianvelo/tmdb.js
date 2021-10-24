@@ -1,10 +1,10 @@
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import { ReviewDetailsResponse } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class ReviewRequest extends TMDBRequest {
-  protected resource = EndpointResource.REVIEW;
+  protected resource = Resource.REVIEW;
 
   protected endpoints = Endpoints;
 

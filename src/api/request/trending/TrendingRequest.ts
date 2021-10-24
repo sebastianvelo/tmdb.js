@@ -1,11 +1,11 @@
 import { TimeWindow } from "../../model/trending/Trending";
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import { AllMediaTypesResponse, MoviesResponse, TVShowsResponse, PeopleResponse } from "../../common/response/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class TrendingRequest extends TMDBRequest {
-  protected resource = EndpointResource.TRENDING;
+  protected resource = Resource.TRENDING;
 
   protected endpoints = Endpoints;
 

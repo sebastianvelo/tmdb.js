@@ -1,10 +1,14 @@
-import EndpointResource from "../../resource/EndpointResource";
-import { CompanyAlternativeNames, CompanyDetailsResponse, CompanyImagesResponse } from "./response/Response";
+import Resource from "../../resource/Resource";
+import {
+  CompanyAlternativeNames,
+  CompanyDetailsResponse,
+  CompanyImagesResponse
+} from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class CompanyRequest extends TMDBRequest {
-  protected resource = EndpointResource.COMPANY;
+  protected resource = Resource.COMPANY;
 
   protected endpoints = Endpoints;
 

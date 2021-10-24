@@ -10,7 +10,7 @@ import {
   TaggedImagesParams,
   TranslationsParams
 } from "./params/Params";
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import {
   ChangesResponse,
   CreditsResponse,
@@ -27,7 +27,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class PersonRequest extends TMDBRequest {
-  protected resource = EndpointResource.PERSON;
+  protected resource = Resource.PERSON;
 
   protected endpoints = Endpoints;
 

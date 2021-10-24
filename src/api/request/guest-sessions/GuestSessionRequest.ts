@@ -1,11 +1,11 @@
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import { MoviesResponse, TVShowsResponse, EpisodesResponse } from "../../common/response/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { GuestSessionParams } from "./params/Params";
 
 class GuestSessionRequest extends TMDBRequest {
-  protected resource = EndpointResource.GUEST_SESSION;
+  protected resource = Resource.GUEST_SESSION;
 
   protected endpoints = Endpoints;
 

@@ -9,7 +9,7 @@ import {
   TopRatedParams,
   UpcomingParams
 } from "../film/params/Params";
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import {
   MoviesResponse,
   TVShowsResponse
@@ -23,7 +23,7 @@ import FilmRequest from "../film/FilmRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class MovieRequest extends FilmRequest {
-  protected resource = EndpointResource.MOVIE;
+  protected resource = Resource.MOVIE;
 
   protected endpoints = Endpoints;
 

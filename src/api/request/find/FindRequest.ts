@@ -1,11 +1,11 @@
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import { FindResponse } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import { FindParams } from "./params/Params";
 
 class FindRequest extends TMDBRequest {
-  protected resource = EndpointResource.FIND;
+  protected resource = Resource.FIND;
 
   protected endpoints = Endpoints;
 

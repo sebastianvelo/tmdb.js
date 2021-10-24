@@ -5,7 +5,7 @@ import {
   DetailParams
 } from "../../common/params/CommonParams";
 import { ImagesParams, VideosParams } from "../film/params/Params";
-import EndpointResource from "../../resource/EndpointResource";
+import Resource from "../../resource/Resource";
 import {
   ChangesResponse,
   CreditsResponse,
@@ -22,7 +22,7 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
 class SeasonRequest extends TMDBRequest {
-  protected resource = EndpointResource.TV;
+  protected resource = Resource.TV;
 
   protected endpoints = Endpoints;
 
