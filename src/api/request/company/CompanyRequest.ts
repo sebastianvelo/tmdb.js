@@ -1,5 +1,5 @@
 import EndpointResource from "../../resource/EndpointResource";
-import { CompanyAlternativeNames, CompanyDetailsResponse, CompanyImagesResponse } from "../../response/company/CompanyResponse";
+import { CompanyAlternativeNames, CompanyDetailsResponse, CompanyImagesResponse } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

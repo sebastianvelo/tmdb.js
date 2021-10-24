@@ -1,4 +1,4 @@
-import { ChangesParams, CreditsParams } from "../../params/common/CommonParams";
+import { ChangesParams, CreditsParams } from "../../common/params/CommonParams";
 import {
   FilmAlternativeTitlesParams,
   ImagesParams,
@@ -8,7 +8,7 @@ import {
   SimilarParams,
   TopRatedParams,
   VideosParams
-} from "../../params/film/FilmParams";
+} from "./params/Params";
 import {
   ChangesResponse,
   CreditsResponse,
@@ -17,8 +17,8 @@ import {
   KeywordsResponse,
   ReviewsResponse,
   VideosResponse
-} from "../../response/common/CommonResponse";
-import { FilmAlternativeTitlesResponse } from "../../response/film/FilmResponse";
+} from "../../common/response/CommonResponse";
+import { FilmAlternativeTitlesResponse } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

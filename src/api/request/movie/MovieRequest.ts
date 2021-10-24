@@ -1,4 +1,4 @@
-import { DetailParams } from "../../params/common/CommonParams";
+import { DetailParams } from "../../common/params/CommonParams";
 import {
   LatestParams,
   ListsParams,
@@ -8,17 +8,17 @@ import {
   SimilarParams,
   TopRatedParams,
   UpcomingParams
-} from "../../params/film/FilmParams";
+} from "../film/params/Params";
 import EndpointResource from "../../resource/EndpointResource";
 import {
   MoviesResponse,
   TVShowsResponse
-} from "../../response/common/CommonResponse";
+} from "../../common/response/CommonResponse";
 import {
   MovieDetailsResponse,
   MovieReleaseDatesResponse,
   MovieTranslationsResponse
-} from "../../response/movie/MovieResponse";
+} from "./response/Response";
 import FilmRequest from "../film/FilmRequest";
 import Endpoints from "./endpoints/Endpoints";
 

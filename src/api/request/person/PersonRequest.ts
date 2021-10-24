@@ -2,14 +2,14 @@ import {
   ChangesParams,
   CreditsParams,
   DetailParams
-} from "../../params/common/CommonParams";
+} from "../../common/params/CommonParams";
 import {
   ExternalIdParams,
   LatestParams,
   PopularParams,
   TaggedImagesParams,
   TranslationsParams
-} from "../../params/person/PersonParams";
+} from "./params/Params";
 import EndpointResource from "../../resource/EndpointResource";
 import {
   ChangesResponse,
@@ -18,11 +18,11 @@ import {
   ImageListResponse,
   ImagesResponse,
   PeopleResponse
-} from "../../response/common/CommonResponse";
+} from "../../common/response/CommonResponse";
 import {
   PersonDetailsResponse,
   PersonTranslationsResponse
-} from "../../response/person/PersonResponse";
+} from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

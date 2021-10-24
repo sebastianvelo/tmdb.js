@@ -1,5 +1,5 @@
 import EndpointResource from "../../resource/EndpointResource";
-import { CreditDetailsResponse } from "../../response/credit/CreditResponse";
+import { CreditDetailsResponse } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

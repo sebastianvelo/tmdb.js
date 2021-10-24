@@ -1,5 +1,5 @@
 import EndpointResource from "../../resource/EndpointResource";
-import { ReviewDetailsResponse } from "../../response/review/ReviewResponse";
+import { ReviewDetailsResponse } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

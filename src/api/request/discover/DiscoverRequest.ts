@@ -1,6 +1,6 @@
-import { DiscoverParams } from "../../params/discover/DiscoverParams";
+import { DiscoverParams } from "./params/Params";
 import EndpointResource from "../../resource/EndpointResource";
-import { MoviesResponse, TVShowsResponse } from "../../response/common/CommonResponse";
+import { MoviesResponse, TVShowsResponse } from "../../common/response/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

@@ -3,20 +3,20 @@ import {
   ChangesParams,
   CreditsParams,
   DetailParams
-} from "../../params/common/CommonParams";
-import { ImagesParams, VideosParams } from "../../params/film/FilmParams";
+} from "../../common/params/CommonParams";
+import { ImagesParams, VideosParams } from "../film/params/Params";
 import EndpointResource from "../../resource/EndpointResource";
 import {
   ChangesResponse,
   CreditsResponse,
   ExternalIDsResponse,
   ImagesResponse
-} from "../../response/common/CommonResponse";
+} from "../../common/response/CommonResponse";
 import {
   EpisodeAccountStatesResponse,
   EpisodeDetailsResponse,
   EpisodeTranslationsResponse
-} from "../../response/episode/EpisodeResponse";
+} from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

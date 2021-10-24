@@ -1,6 +1,6 @@
-import { KeywordDetailResponse } from "../../response/keyword/KeywordResponse";
+import { KeywordDetailResponse } from "./response/Response";
 import EndpointResource from "../../resource/EndpointResource";
-import { MoviesResponse } from "../../response/common/CommonResponse";
+import { MoviesResponse } from "../../common/response/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 

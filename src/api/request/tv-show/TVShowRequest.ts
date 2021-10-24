@@ -1,23 +1,23 @@
 import {
   AccountStatesParams,
   DetailParams
-} from "../../params/common/CommonParams";
+} from "../../common/params/CommonParams";
 import {
   LatestParams,
   PopularParams,
   RecommendationsParams,
   SimilarParams,
   TopRatedParams
-} from "../../params/film/FilmParams";
+} from "../film/params/Params";
 import EndpointResource from "../../resource/EndpointResource";
 import {
   AccountStatesResponse,
   TVShowsResponse
-} from "../../response/common/CommonResponse";
+} from "../../common/response/CommonResponse";
 import {
   TVShowDetailsResponse,
   TVShowTranslationsResponse
-} from "../../response/tv-show/TVShowResponse";
+} from "./response/Response";
 import FilmRequest from "../film/FilmRequest";
 import Endpoints from "./endpoints/Endpoints";
 
