@@ -3,8 +3,6 @@ import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 import {
   FilmAlternativeTitlesParams,
-  ChangesParams,
-  CreditsParams,
   ImagesParams,
   LatestParams,
   ListsParams,
@@ -15,50 +13,51 @@ import {
   TopRatedParams,
   VideosParams
 } from "../../params/film/FilmParams";
+import { ChangesParams, CreditsParams } from "../../params/common/CommonParams";
 
 abstract class FilmRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
-  public getAlternativeTitles = (id: string, query?: FilmAlternativeTitlesParams) =>
+  public getAlternativeTitles = (id: number, query?: FilmAlternativeTitlesParams) =>
     this.get<FilmAlternativeTitlesResponse>(
       this.endpoints.GET_ALTERNATIVE_TITLES(id),
       query
     );
 
-  public getChanges = (id: string, query?: ChangesParams) =>
+  public getChanges = (id: number, query?: ChangesParams) =>
     this.get(this.endpoints.GET_CHANGES(id), query);
 
-  public getCredits = (id: string, query?: CreditsParams) =>
+  public getCredits = (id: number, query?: CreditsParams) =>
     this.get(this.endpoints.GET_CREDITS(id), query);
 
   public getExternalIds = (id: number) =>
     this.get(this.endpoints.GET_EXTERNAL_IDS(id));
 
-  public getImages = (id: string, query?: ImagesParams) =>
+  public getImages = (id: number, query?: ImagesParams) =>
     this.get(this.endpoints.GET_IMAGES(id), query);
 
   public getKeywords = (id: number) =>
     this.get(this.endpoints.GET_KEYWORDS(id));
 
-  public getLists = (id: string, query?: ListsParams) =>
+  public getLists = (id: number, query?: ListsParams) =>
     this.get(this.endpoints.GET_LISTS(id), query);
 
-  public getRecommendations = (id: string, query?: RecommendationsParams) =>
+  public getRecommendations = (id: number, query?: RecommendationsParams) =>
     this.get(this.endpoints.GET_RECOMMENDATIONS(id), query);
 
   public getRelaseDates = (id: number) =>
     this.get(this.endpoints.GET_RELEASE_DATES(id));
 
-  public getReviews = (id: string, query?: ReviewsParams) =>
+  public getReviews = (id: number, query?: ReviewsParams) =>
     this.get(this.endpoints.GET_REVIEWS(id), query);
 
-  public getSimilars = (id: string, query?: SimilarParams) =>
+  public getSimilars = (id: number, query?: SimilarParams) =>
     this.get(this.endpoints.GET_SIMILAR(id), query);
 
   public getTranslations = (id: number) =>
     this.get(this.endpoints.GET_TRANSLATIONS(id));
 
-  public getVideos = (id: string, query?: VideosParams) =>
+  public getVideos = (id: number, query?: VideosParams) =>
     this.get(this.endpoints.GET_VIDEOS(id), query);
 
   public getWatchProviders = (id: number) =>

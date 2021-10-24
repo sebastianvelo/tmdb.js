@@ -1,19 +1,11 @@
 import { LanguageParams, PageParams, RegionParams } from "../Params";
 
-export interface FilmDetailsParams extends LanguageParams {
-  append_to_response?: string;
-}
 export interface FilmAlternativeTitlesParams {
   country?: string;
-}
-export interface ChangesParams extends PageParams {
-  start_date?: string;
-  end_date?: string;
 }
 export interface ImagesParams extends LanguageParams {
   include_image_language?: string;
 }
-export interface CreditsParams extends LanguageParams {}
 export interface ListsParams extends LanguageParams, PageParams {}
 export interface RecommendationsParams extends LanguageParams, PageParams {}
 export interface ReviewsParams extends LanguageParams, PageParams {}

@@ -9,7 +9,7 @@ class FindRequest extends TMDBRequest {
 
   protected endpoints = Endpoints;
 
-  public find = (id: string, query?: FindParams) =>
+  public find = (id: number, query?: FindParams) =>
     this.get<FindResponse>(this.endpoints.FIND(id), query);
 }
 

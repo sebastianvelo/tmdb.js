@@ -10,7 +10,8 @@ enum EndpointResource {
   NETWORK = "/network",
   TRENDING = "/trending",
   SEARCH = "/search",
-  PERSON = "/person"
+  PERSON = "/person",
+  REVIEW = "/review",
 }
 
 export default EndpointResource;

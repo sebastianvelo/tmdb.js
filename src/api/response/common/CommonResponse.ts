@@ -1,7 +1,7 @@
 import { PaginableResponse } from "../../model/CommonModels";
 import { Episode } from "../../model/film/Film";
 import { Genre } from "../../model/genre/Genre";
-import { KeywordDetailResponse } from "../keyword/Keyword";
+import { KeywordDetailResponse } from "../keyword/KeywordResponse";
 import { Person } from "../../model/person/Person";
 import MovieRequest from "../../request/movie/MovieRequest";
 import TVShowRequest from "../../request/tv-show/TVShowRequest";
