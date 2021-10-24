@@ -1,4 +1,4 @@
-import { TranslationsResponse } from "../../../model/CommonModels";
+import { TranslationsResponse } from "../../../common/response/CommonResponse";
 import { TVShow } from "../../../model/film/Film";
 import { FilmDetailsResponse } from "../../film/response/Response";
 

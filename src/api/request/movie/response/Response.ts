@@ -1,4 +1,4 @@
-import { ListResponse, TranslationsResponse } from "../../../model/CommonModels";
+import { TranslationsResponse, ListResponse } from "../../../common/response/CommonResponse";
 import { Movie } from "../../../model/film/Film";
 import { ReleaseDate } from "../../../model/movie/Movie";
 import { FilmDetailsResponse } from "../../film/response/Response";

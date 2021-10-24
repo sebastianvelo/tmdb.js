@@ -1,6 +1,5 @@
-import { TranslationsResponse } from "../../../model/CommonModels";
 import { Character, Episode, GuestStar } from "../../../model/episode/Episode";
-import { AccountStatesResponse } from "../../../common/response/CommonResponse";
+import { AccountStatesResponse, TranslationsResponse } from "../../../common/response/CommonResponse";
 
 export interface EpisodeDetailsResponse extends Episode {
   crew?: Character[];

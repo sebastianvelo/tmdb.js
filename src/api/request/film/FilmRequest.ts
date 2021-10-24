@@ -2,7 +2,8 @@ import { ChangesParams, CreditsParams } from "../../common/params/CommonParams";
 import {
   FilmAlternativeTitlesParams,
   ImagesParams,
-  LatestParams, PopularParams,
+  LatestParams,
+  PopularParams,
   RecommendationsParams,
   ReviewsParams,
   SimilarParams,
@@ -69,13 +70,13 @@ abstract class FilmRequest extends TMDBRequest {
   protected getSimilars = <T>(id: number, query?: SimilarParams) =>
     this.get<T>(this.endpoints.GET_SIMILAR(id), query);
 
-  public getLatest = <T>(query?: LatestParams) =>
+  protected getLatest = <T>(query?: LatestParams) =>
     this.get<T>(this.endpoints.GET_LATEST(), query);
 
-  public getPopular = <T>(query?: PopularParams) =>
+  protected getPopular = <T>(query?: PopularParams) =>
     this.get<T>(this.endpoints.GET_POPULAR(), query);
 
-  public getTopRated = <T>(query?: TopRatedParams) =>
+  protected getTopRated = <T>(query?: TopRatedParams) =>
     this.get<T>(this.endpoints.GET_TOP_RATED(), query);
 }
 

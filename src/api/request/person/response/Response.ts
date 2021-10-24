@@ -1,4 +1,5 @@
-import { TMDBEntity, TranslationsResponse } from "../../../model/CommonModels";
+import { TranslationsResponse } from "../../../common/response/CommonResponse";
+import { TMDBEntity } from "../../../model/CommonModels";
 import { PersonDetail } from "../../../model/person/Person";
 
 export interface PersonResponse extends TMDBEntity {

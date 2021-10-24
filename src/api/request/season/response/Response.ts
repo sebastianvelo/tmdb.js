@@ -1,7 +1,6 @@
-import { ListResponse, TranslationsResponse } from "../../../model/CommonModels";
 import { Episode } from "../../../model/episode/Episode";
 import { Season } from "../../../model/season/Season";
-import { AccountStatesResponse } from "../../../common/response/CommonResponse";
+import { AccountStatesResponse, ListResponse, TranslationsResponse } from "../../../common/response/CommonResponse";
 
 export interface SeasonDetailsResponse extends Season {
   episodes?: Episode[];

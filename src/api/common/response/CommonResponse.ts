@@ -1,9 +1,5 @@
 import { Change } from "../../model/changes/Changes";
-import {
-  PaginableResponse,
-  TMDBEntity,
-  ListResponse
-} from "../../model/CommonModels";
+import { TMDBEntity, Translation } from "../../model/CommonModels";
 import { Company } from "../../model/company/Company";
 import { Movie, TVShow } from "../../model/film/Film";
 import { Genre } from "../../model/genre/Genre";
@@ -47,4 +43,19 @@ export interface ExternalIDsResponse extends TMDBEntity {
 export interface ImagesResponse extends TMDBEntity {
   backdrops?: Image[];
   posters?: Image[];
+}
+
+export interface ListResponse<T> extends TMDBEntity {
+  results?: T[];
+}
+
+export type PaginableResponse<T> = {
+  page: number;
+  results: T[];
+  total_results: number;
+  total_pages: number;
+};
+
+export interface TranslationsResponse<T> extends TMDBEntity {
+  translations?: Translation<T>[];
 }

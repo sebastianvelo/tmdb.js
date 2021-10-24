@@ -24,7 +24,7 @@ import Endpoints from "./endpoints/Endpoints";
 class TVShowRequest extends FilmRequest {
   protected resource = EndpointResource.TV;
 
-  protected endpoints = { ...super.endpoints, ...Endpoints };
+  protected endpoints = Endpoints;
 
   public getDetails = (id: number, query?: DetailParams) =>
     this.get<TVShowDetailsResponse>(this.endpoints.GET_DETAILS(id), query);
