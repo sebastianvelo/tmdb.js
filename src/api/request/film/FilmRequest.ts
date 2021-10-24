@@ -1,6 +1,4 @@
-import { FilmAlternativeTitlesResponse } from "../../response/film/FilmResponse";
-import TMDBRequest from "../TMDBRequest";
-import Endpoints from "./endpoints/Endpoints";
+import { ChangesParams, CreditsParams } from "../../params/common/CommonParams";
 import {
   FilmAlternativeTitlesParams,
   ImagesParams,
@@ -13,28 +11,39 @@ import {
   TopRatedParams,
   VideosParams
 } from "../../params/film/FilmParams";
-import { ChangesParams, CreditsParams } from "../../params/common/CommonParams";
+import {
+  ChangesResponse,
+  CreditsResponse,
+  ExternalIDsResponse,
+  ImagesResponse
+} from "../../response/common/CommonResponse";
+import { FilmAlternativeTitlesResponse } from "../../response/film/FilmResponse";
+import TMDBRequest from "../TMDBRequest";
+import Endpoints from "./endpoints/Endpoints";
 
 abstract class FilmRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
-  public getAlternativeTitles = (id: number, query?: FilmAlternativeTitlesParams) =>
+  public getAlternativeTitles = (
+    id: number,
+    query?: FilmAlternativeTitlesParams
+  ) =>
     this.get<FilmAlternativeTitlesResponse>(
       this.endpoints.GET_ALTERNATIVE_TITLES(id),
       query
     );
 
   public getChanges = (id: number, query?: ChangesParams) =>
-    this.get(this.endpoints.GET_CHANGES(id), query);
+    this.get<ChangesResponse>(this.endpoints.GET_CHANGES(id), query);
 
   public getCredits = (id: number, query?: CreditsParams) =>
-    this.get(this.endpoints.GET_CREDITS(id), query);
+    this.get<CreditsResponse>(this.endpoints.GET_CREDITS(id), query);
 
   public getExternalIds = (id: number) =>
-    this.get(this.endpoints.GET_EXTERNAL_IDS(id));
+    this.get<ExternalIDsResponse>(this.endpoints.GET_EXTERNAL_IDS(id));
 
   public getImages = (id: number, query?: ImagesParams) =>
-    this.get(this.endpoints.GET_IMAGES(id), query);
+    this.get<ImagesResponse>(this.endpoints.GET_IMAGES(id), query);
 
   public getKeywords = (id: number) =>
     this.get(this.endpoints.GET_KEYWORDS(id));
