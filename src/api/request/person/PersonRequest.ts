@@ -4,27 +4,25 @@ import {
   DetailParams
 } from "../../common/params/CommonParams";
 import {
+  ChangesResponse,
+  CreditsResponse,
+  ExternalIDsResponse,
+  ImageListResponse,
+  ImagesResponse
+} from "../../common/response/CommonResponse";
+import Resource from "../../resource/Resource";
+import TMDBRequest from "../TMDBRequest";
+import Endpoints from "./endpoints/Endpoints";
+import {
   ExternalIdParams,
   LatestParams,
   PopularParams,
   TaggedImagesParams,
   TranslationsParams
 } from "./params/Params";
-import Resource from "../../resource/Resource";
 import {
-  ChangesResponse,
-  CreditsResponse,
-  ExternalIDsResponse,
-  ImageListResponse,
-  ImagesResponse,
-  PeopleResponse
-} from "../../common/response/CommonResponse";
-import {
-  PersonResponse,
-  PersonTranslationsResponse
+  PersonDetailsResponse, PersonTranslationsResponse
 } from "./response/Response";
-import TMDBRequest from "../TMDBRequest";
-import Endpoints from "./endpoints/Endpoints";
 
 class PersonRequest extends TMDBRequest {
   protected resource = Resource.PERSON;
@@ -32,7 +30,7 @@ class PersonRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number, query?: DetailParams) =>
-    this.get<PersonResponse>(this.endpoints.getDetails(id), query);
+    this.get<PersonDetailsResponse>(this.endpoints.getDetails(id), query);
 
   public getChanges = (id: number, query?: ChangesParams) =>
     this.get<ChangesResponse>(this.endpoints.getChanges(id), query);
@@ -62,9 +60,9 @@ class PersonRequest extends TMDBRequest {
     );
 
   public getLatest = (query?: LatestParams) =>
-    this.get<PersonResponse>(this.endpoints.getLatest(), query);
+    this.get<PersonDetailsResponse>(this.endpoints.getLatest(), query);
 
   public getPopular = (query?: PopularParams) =>
-    this.get<PeopleResponse>(this.endpoints.getPopular(), query);
+    this.get<PersonDetailsResponse>(this.endpoints.getPopular(), query);
 }
 export default PersonRequest;

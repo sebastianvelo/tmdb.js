@@ -7,7 +7,7 @@ export interface PersonResponse extends TMDBEntity {
   known_for_department?: string;
 }
 
-export interface PersonResponse extends PersonDetail {}
+export interface PersonDetailsResponse extends PersonDetail {}
 
 
 export type PersonTranslationsResponse = TranslationsResponse<{
