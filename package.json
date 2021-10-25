@@ -1,8 +1,8 @@
 {
-  "name": "ifdb-back-end",
-  "version": "1.0.0",
+  "name": "tmdb-js",
+  "version": "1.0.5",
   "description": "",
-  "main": "index.js",
+  "main": "lib/TMDBClient.js",
   "scripts": {
     "dev": "ts-node-dev ./src/app.ts",
     "start": "node ./dist/app.js",
@@ -10,6 +10,9 @@
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

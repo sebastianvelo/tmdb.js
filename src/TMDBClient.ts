@@ -1,19 +1,19 @@
-import CompanyRequest from "./request/company/CompanyRequest";
-import CreditRequest from "./request/credit/CreditRequest";
-import DiscoverRequest from "./request/discover/DiscoverRequest";
-import EpisodeRequest from "./request/episode/EpisodeRequest";
-import FindRequest from "./request/find/FindRequest";
-import GenreRequest from "./request/genre/GenreRequest";
-import GuestSessionRequest from "./request/guest-sessions/GuestSessionRequest";
-import KeywordRequest from "./request/keyword/KeywordRequest";
-import MovieRequest from "./request/movie/MovieRequest";
-import NetworkRequest from "./request/network/NetworkRequest";
-import PersonRequest from "./request/person/PersonRequest";
-import ReviewRequest from "./request/review/ReviewRequest";
-import SearchRequest from "./request/search/SearchRequest";
-import TrendingRequest from "./request/trending/TrendingRequest";
-import TVShowRequest from "./request/tv-show/TVShowRequest";
-import WatchProviderRequest from "./request/watch-provider/WatchProviderRequest";
+import CompanyRequest from "./api/request/company/CompanyRequest";
+import CreditRequest from "./api/request/credit/CreditRequest";
+import DiscoverRequest from "./api/request/discover/DiscoverRequest";
+import EpisodeRequest from "./api/request/episode/EpisodeRequest";
+import FindRequest from "./api/request/find/FindRequest";
+import GenreRequest from "./api/request/genre/GenreRequest";
+import GuestSessionRequest from "./api/request/guest-sessions/GuestSessionRequest";
+import KeywordRequest from "./api/request/keyword/KeywordRequest";
+import MovieRequest from "./api/request/movie/MovieRequest";
+import NetworkRequest from "./api/request/network/NetworkRequest";
+import PersonRequest from "./api/request/person/PersonRequest";
+import ReviewRequest from "./api/request/review/ReviewRequest";
+import SearchRequest from "./api/request/search/SearchRequest";
+import TrendingRequest from "./api/request/trending/TrendingRequest";
+import TVShowRequest from "./api/request/tv-show/TVShowRequest";
+import WatchProviderRequest from "./api/request/watch-provider/WatchProviderRequest";
 
 type TMDBVersion = "3" | "4";
 class TMDBClient {
