@@ -1,4 +1,4 @@
-import { KeywordDetailResponse } from "./response/Response";
+import { KeywordResponse } from "./response/Response";
 import Resource from "../../resource/Resource";
 import { MoviesResponse } from "../../common/response/CommonResponse";
 import TMDBRequest from "../TMDBRequest";
@@ -10,7 +10,7 @@ class KeywordRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number) =>
-    this.get<KeywordDetailResponse>(this.endpoints.getDetails(id));
+    this.get<KeywordResponse>(this.endpoints.getDetails(id));
 
   public getMovies = (id: number) =>
     this.get<MoviesResponse>(this.endpoints.getMovies(id));

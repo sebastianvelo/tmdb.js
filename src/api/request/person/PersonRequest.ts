@@ -20,7 +20,7 @@ import {
   PeopleResponse
 } from "../../common/response/CommonResponse";
 import {
-  PersonDetailsResponse,
+  PersonResponse,
   PersonTranslationsResponse
 } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
@@ -32,7 +32,7 @@ class PersonRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number, query?: DetailParams) =>
-    this.get<PersonDetailsResponse>(this.endpoints.getDetails(id), query);
+    this.get<PersonResponse>(this.endpoints.getDetails(id), query);
 
   public getChanges = (id: number, query?: ChangesParams) =>
     this.get<ChangesResponse>(this.endpoints.getChanges(id), query);
@@ -62,7 +62,7 @@ class PersonRequest extends TMDBRequest {
     );
 
   public getLatest = (query?: LatestParams) =>
-    this.get<PersonDetailsResponse>(this.endpoints.getLatest(), query);
+    this.get<PersonResponse>(this.endpoints.getLatest(), query);
 
   public getPopular = (query?: PopularParams) =>
     this.get<PeopleResponse>(this.endpoints.getPopular(), query);

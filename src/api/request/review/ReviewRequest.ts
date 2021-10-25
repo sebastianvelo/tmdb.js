@@ -1,5 +1,5 @@
 import Resource from "../../resource/Resource";
-import { ReviewDetailsResponse } from "./response/Response";
+import { ReviewResponse } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
 import Endpoints from "./endpoints/Endpoints";
 
@@ -9,7 +9,7 @@ class ReviewRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number) =>
-    this.get<ReviewDetailsResponse>(this.endpoints.getDetails(id));
+    this.get<ReviewResponse>(this.endpoints.getDetails(id));
 
 }
 

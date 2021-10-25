@@ -1,6 +1,6 @@
-import { LanguageParams, RegionParams, SortParams, PageParams } from "../../../common/params/CommonParams";
+import { LanguageParams, RegionParams, SortParams, PageParams, WatchRegionParams } from "../../../common/params/CommonParams";
 
-export interface DiscoverParams extends LanguageParams, RegionParams, SortParams, PageParams {
+export interface DiscoverParams extends LanguageParams, RegionParams, SortParams, PageParams, WatchRegionParams {
   certification_country?: string;
   certification?: string;
   include_adult?: boolean;
@@ -30,6 +30,5 @@ export interface DiscoverParams extends LanguageParams, RegionParams, SortParams
   without_keywords?: string;
   with_original_language?: string;
   with_watch_providers?: string;
-  watch_region?: string;
   with_watch_monetization_types?: string;
 }

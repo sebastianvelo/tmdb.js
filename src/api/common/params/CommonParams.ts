@@ -9,7 +9,9 @@ export interface PageParams {
 export interface RegionParams {
   region?: string;
 }
-
+export interface WatchRegionParams {
+  watch_region?: string;
+}
 export interface SortParams {
   sort_by?: SortBy;
 }

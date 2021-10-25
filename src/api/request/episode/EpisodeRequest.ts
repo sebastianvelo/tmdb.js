@@ -14,7 +14,7 @@ import {
 } from "../../common/response/CommonResponse";
 import {
   EpisodeAccountStatesResponse,
-  EpisodeDetailsResponse,
+  EpisodeResponse,
   EpisodeTranslationsResponse
 } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
@@ -31,7 +31,7 @@ class EpisodeRequest extends TMDBRequest {
     episode: number,
     query?: DetailParams
   ) =>
-    this.get<EpisodeDetailsResponse>(
+    this.get<EpisodeResponse>(
       this.endpoints.getDetails(id, season, episode),
       query
     );

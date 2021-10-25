@@ -13,3 +13,7 @@ export type ProductionCountry = {
 export interface ProductionCompany extends Company {
   origin_country: string;
 }
+export interface CompanyAlternativeName {
+  name?: string;
+  type?: string;
+};

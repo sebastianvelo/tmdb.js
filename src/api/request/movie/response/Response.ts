@@ -1,9 +1,9 @@
 import { TranslationsResponse, ListResponse } from "../../../common/response/CommonResponse";
 import { Movie } from "../../../model/film/Film";
 import { ReleaseDate } from "../../../model/movie/Movie";
-import { FilmDetailsResponse } from "../../film/response/Response";
+import { FilmResponse } from "../../film/response/Response";
 
-export interface MovieDetailsResponse extends FilmDetailsResponse, Movie {};
+export interface MovieResponse extends FilmResponse, Movie {};
 
 export type MovieTranslationsResponse = TranslationsResponse<{
     title?: string;

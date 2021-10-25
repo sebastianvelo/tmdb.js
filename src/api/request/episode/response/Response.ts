@@ -1,7 +1,7 @@
 import { Character, Episode, GuestStar } from "../../../model/episode/Episode";
 import { AccountStatesResponse, TranslationsResponse } from "../../../common/response/CommonResponse";
 
-export interface EpisodeDetailsResponse extends Episode {
+export interface EpisodeResponse extends Episode {
   crew?: Character[];
   guest_stars?: GuestStar[];
 }

@@ -1,7 +1,7 @@
 import { Language } from "../../../model/CommonModels";
 import { AuthorDetails } from "../../../model/review/Review";
 
-export interface ReviewDetailsResponse extends Language {
+export interface ReviewResponse extends Language {
   author?: string;
   author_details?: AuthorDetails;
   content?: string;

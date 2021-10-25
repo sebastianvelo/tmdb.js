@@ -15,7 +15,7 @@ import {
   TVShowsResponse
 } from "../../common/response/CommonResponse";
 import {
-  TVShowDetailsResponse,
+  TVShowResponse,
   TVShowTranslationsResponse
 } from "./response/Response";
 import FilmRequest from "../film/FilmRequest";
@@ -27,7 +27,7 @@ class TVShowRequest extends FilmRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number, query?: DetailParams) =>
-    this.get<TVShowDetailsResponse>(this.endpoints.getDetails(id), query);
+    this.get<TVShowResponse>(this.endpoints.getDetails(id), query);
 
   public getAccountStates = (id: number, query?: AccountStatesParams) =>
     this.get<AccountStatesResponse>(

@@ -1,7 +1,7 @@
 import Resource from "../../resource/Resource";
 import {
-  CompanyAlternativeNames,
-  CompanyDetailsResponse,
+  CompanyAlternativeNamesResponse,
+  CompanyResponse,
   CompanyImagesResponse
 } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
@@ -13,10 +13,10 @@ class CompanyRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number) =>
-    this.get<CompanyDetailsResponse>(this.endpoints.getDetails(id));
+    this.get<CompanyResponse>(this.endpoints.getDetails(id));
 
   public getAlternativeNames = (id: number) =>
-    this.get<CompanyAlternativeNames>(this.endpoints.getAlternativeNames(id));
+    this.get<CompanyAlternativeNamesResponse>(this.endpoints.getAlternativeNames(id));
 
   public getImages = (id: number) =>
     this.get<CompanyImagesResponse>(this.endpoints.getImages(id));
