@@ -44,19 +44,19 @@ class MovieRequest extends FilmRequest {
     query?: RecommendationsParams
   ) => super.getRecommendations<MoviesResponse>(id, query);
 
-  public getSimilarShows = (id: number, query?: SimilarParams) =>
+  public getSimilarMovies = (id: number, query?: SimilarParams) =>
     super.getSimilars<MoviesResponse>(id, query);
 
-  public getLatestShows = (query?: LatestParams) =>
+  public getLatestMovies = (query?: LatestParams) =>
     super.getLatest<MoviesResponse>(query);
 
-  public getPopularShows = (query?: PopularParams) =>
+  public getPopularMovies = (query?: PopularParams) =>
     super.getPopular<MoviesResponse>(query);
 
-  public getTopRatedShows = (query?: TopRatedParams) =>
+  public getTopRatedMovies = (query?: TopRatedParams) =>
     super.getTopRated<TVShowsResponse>(query);
 
-  public getShowTranslations = (id: number) =>
+  public getMovieTranslations = (id: number) =>
     super.getTranslations<MovieTranslationsResponse>(id);
 
   public getLists = (id: number, query?: ListsParams) =>
