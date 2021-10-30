@@ -1,8 +1,8 @@
 import { TranslationsResponse } from "../../../common/response/CommonResponse";
-import { TMDBEntity } from "../../../model/CommonModels";
+import { TMDBEntityModel } from "../../../model/CommonModels";
 import { PersonDetail } from "../../../model/person/Person";
 
-export interface PersonResponse extends TMDBEntity {
+export interface PersonResponse extends TMDBEntityModel {
   birthday?: string | null;
   known_for_department?: string;
 }

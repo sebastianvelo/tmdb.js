@@ -1,4 +1,4 @@
-export interface TMDBEntity {
+export interface TMDBEntityModel {
   id?: number;
 }
 export interface Language {

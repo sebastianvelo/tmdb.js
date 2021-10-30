@@ -1,5 +1,5 @@
 import { Change } from "../../model/changes/Changes";
-import { TMDBEntity, Translation } from "../../model/CommonModels";
+import { TMDBEntityModel, Translation } from "../../model/CommonModels";
 import { Company } from "../../model/company/Company";
 import { Movie, TVShow } from "../../model/film/Film";
 import { Image } from "../../model/image/Image";
@@ -23,25 +23,25 @@ export type VideosResponse = ListResponse<Video>;
 export interface ChangesResponse {
   changes?: Change[];
 }
-export interface AccountStatesResponse extends TMDBEntity {
+export interface AccountStatesResponse extends TMDBEntityModel {
   rated: { value: number } | boolean;
 }
-export interface CreditsResponse extends TMDBEntity {
+export interface CreditsResponse extends TMDBEntityModel {
   cast: CreditPerson[];
   crew: CrewPerson[];
 }
-export interface ExternalIDsResponse extends TMDBEntity {
+export interface ExternalIDsResponse extends TMDBEntityModel {
   imdb_id?: string | null;
   facebook_id?: string | null;
   instagram_id?: string | null;
   twitter_id?: string | null;
 }
-export interface ImagesResponse extends TMDBEntity {
+export interface ImagesResponse extends TMDBEntityModel {
   backdrops?: Image[];
   posters?: Image[];
 }
 
-export interface ListResponse<T> extends TMDBEntity {
+export interface ListResponse<T> extends TMDBEntityModel {
   results?: T[];
 }
 
@@ -52,6 +52,6 @@ export type PaginableResponse<T> = {
   total_pages: number;
 };
 
-export interface TranslationsResponse<T> extends TMDBEntity {
+export interface TranslationsResponse<T> extends TMDBEntityModel {
   translations?: Translation<T>[];
 }

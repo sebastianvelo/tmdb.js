@@ -1,7 +1,7 @@
-import { TMDBEntity } from "../../../model/CommonModels";
+import { TMDBEntityModel } from "../../../model/CommonModels";
 import { Media, Person } from "../../../model/credit/Credit";
 
-export interface CreditResponse extends TMDBEntity {
+export interface CreditResponse extends TMDBEntityModel {
   credit_type: string;
   department?: string;
   job?: string;

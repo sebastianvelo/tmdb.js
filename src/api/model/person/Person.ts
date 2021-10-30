@@ -1,13 +1,13 @@
-import { TMDBEntity } from "../CommonModels";
+import { TMDBEntityModel } from "../CommonModels";
 import { Movie, TVShow } from "../film/Film";
 
-export interface Person extends TMDBEntity {
+export interface Person extends TMDBEntityModel {
   profile_path?: string | null;
   adult?: boolean;
   known_for?: (Movie | TVShow)[];
 }
 
-export interface PersonDetail extends TMDBEntity {
+export interface PersonDetail extends TMDBEntityModel {
   birthday?: string;
   known_for_department?: string;
   deathday?: null | string;

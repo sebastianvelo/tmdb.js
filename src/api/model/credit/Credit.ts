@@ -1,10 +1,10 @@
-import { TMDBEntity } from "../CommonModels";
+import { TMDBEntityModel } from "../CommonModels";
 import { Season } from "../season/Season";
 
-export interface Person extends TMDBEntity {
+export interface Person extends TMDBEntityModel {
   name?: string;
 }
-export interface Media extends TMDBEntity {
+export interface Media extends TMDBEntityModel {
   name: string;
   original_name: string;
   character: string;
@@ -12,7 +12,7 @@ export interface Media extends TMDBEntity {
   seasons: Season[];
 }
 
-export interface CreditPerson extends TMDBEntity {
+export interface CreditPerson extends TMDBEntityModel {
   adult?: boolean;
   gender?: number | null;
   known_for_department?: string;

@@ -1,7 +1,7 @@
-import { TMDBEntity } from "../CommonModels";
+import { TMDBEntityModel } from "../CommonModels";
 import { Rating } from "../rating/Rating";
 
-export interface Person extends TMDBEntity {
+export interface Person extends TMDBEntityModel {
   credit_id?: string;
   name?: string;
   profile_path?: string | null;
@@ -17,7 +17,7 @@ export interface GuestStar extends Character {
   character?: string;
 }
 
-export interface Episode extends Rating, TMDBEntity {
+export interface Episode extends Rating, TMDBEntityModel {
   air_date?: string;
   episode_number?: number;
   name?: string;

@@ -1,6 +1,6 @@
-import { TMDBEntity } from "../CommonModels";
+import { TMDBEntityModel } from "../CommonModels";
 
-export interface Company extends TMDBEntity {
+export interface Company extends TMDBEntityModel {
   logo_path?: string;
   name?: string;
 }

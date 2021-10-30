@@ -1,7 +1,7 @@
-import { Language, TMDBEntity } from "../CommonModels";
+import { Language, TMDBEntityModel } from "../CommonModels";
 import { Rating } from "../rating/Rating";
 
-interface Film extends Rating, TMDBEntity {
+interface Film extends Rating, TMDBEntityModel {
   adult?: boolean;
   backdrop_path?: string | null;
   original_title?: string;

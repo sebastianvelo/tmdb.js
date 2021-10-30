@@ -1,5 +1,5 @@
-import { TMDBEntity } from "../../../model/CommonModels";
+import { TMDBEntityModel } from "../../../model/CommonModels";
 
-export interface KeywordResponse extends TMDBEntity {
+export interface KeywordResponse extends TMDBEntityModel {
   name?: string;
 }
