@@ -8,7 +8,8 @@ import {
   CreditsResponse,
   ExternalIDsResponse,
   ImageListResponse,
-  ImagesResponse
+  ImagesResponse,
+  PeopleResponse
 } from "../../common/response/CommonResponse";
 import Resource from "../../resource/Resource";
 import TMDBRequest from "../TMDBRequest";
@@ -63,6 +64,6 @@ class PersonRequest extends TMDBRequest {
     this.get<PersonDetailsResponse>(this.endpoints.getLatest(), query);
 
   public getPopular = (query?: PopularParams) =>
-    this.get<PersonDetailsResponse>(this.endpoints.getPopular(), query);
+    this.get<PeopleResponse>(this.endpoints.getPopular(), query);
 }
 export default PersonRequest;

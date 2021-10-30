@@ -15,7 +15,7 @@ import {
 } from "../../common/response/CommonResponse";
 import {
   SeasonAccountStatesResponse,
-  SeasonResponse,
+  SeasonWithEpisodesResponse,
   SeasonTranslationsResponse
 } from "./response/Response";
 import TMDBRequest from "../TMDBRequest";
@@ -27,7 +27,7 @@ class SeasonRequest extends TMDBRequest {
   protected endpoints = Endpoints;
 
   public getDetails = (id: number, season: number, query?: DetailParams) =>
-    this.get<SeasonResponse>(
+    this.get<SeasonWithEpisodesResponse>(
       this.endpoints.getDetails(id, season),
       query
     );

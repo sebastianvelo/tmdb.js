@@ -3,10 +3,14 @@ import { Season } from "../../../model/season/Season";
 import { AccountStatesResponse, ListResponse, TranslationsResponse } from "../../../common/response/CommonResponse";
 
 export interface SeasonResponse extends Season {
-  episodes?: Episode[];
   name?: string;
   overview?: string;
+  episode_count?: number;
 }
+export interface SeasonWithEpisodesResponse extends SeasonResponse {
+  episodes?: Episode[];
+}
+
 
 interface SeasonAccountStates extends AccountStatesResponse {
   episode_number?: number;
