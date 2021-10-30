@@ -30,10 +30,7 @@ class TVShowRequest extends FilmRequest {
     this.get<TVShowResponse>(this.endpoints.getDetails(id), query);
 
   public getAccountStates = (id: number, query?: AccountStatesParams) =>
-    this.get<AccountStatesResponse>(
-      this.endpoints.getAccountStates(id),
-      query
-    );
+    this.get<AccountStatesResponse>(this.endpoints.getAccountStates(id), query);
 
   public getAggregateCredits = (id: number, query?: any) =>
     this.get(this.endpoints.getAggregateCredits(id), query);
@@ -45,7 +42,7 @@ class TVShowRequest extends FilmRequest {
     this.get(this.endpoints.getEpisodeGroups(id), query);
 
   public getShowTranslations = (id: number) =>
-    super.getTranslations<TVShowTranslationsResponse>(id);
+    this.getTranslations<TVShowTranslationsResponse>(id);
 
   public getScreenedTheatrically = (id: number) =>
     this.get<TVShowsResponse>(this.endpoints.getScreenedTheatrically(id));
@@ -57,19 +54,19 @@ class TVShowRequest extends FilmRequest {
     this.get<TVShowsResponse>(this.endpoints.getOnTheAir(), query);
 
   protected getSimilarShows = (id: number, query?: SimilarParams) =>
-    super.getSimilars<TVShowsResponse>(id, query);
+    this.getSimilars<TVShowsResponse>(id, query);
 
-  public getLatestShows = (query?: LatestParams) =>
-    super.getLatest<TVShowsResponse>(query);
+  public getLatestShow = (query?: LatestParams) =>
+    this.getLatest<TVShowResponse>(query);
 
   public getPopularShows = (query?: PopularParams) =>
-    super.getPopular<TVShowsResponse>(query);
+    this.getPopular<TVShowsResponse>(query);
 
   public getTopRatedShows = (query?: TopRatedParams) =>
-    super.getTopRated<TVShowsResponse>(query);
+    this.getTopRated<TVShowsResponse>(query);
 
   public getTVRecommendations = (id: number, query?: RecommendationsParams) =>
-    super.getRecommendations<TVShowsResponse>(id, query);
+    this.getRecommendations<TVShowsResponse>(id, query);
 }
 
 export default TVShowRequest;
