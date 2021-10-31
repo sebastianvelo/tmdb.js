@@ -14,7 +14,7 @@ const Endpoints = {
   getTranslations: (id: number, season: number) =>
     `/${id}/season/${season}/translations`,
   getVideos: (id: number, season: number) =>
-    `/${id}/season/${season}/videos/`
+    `/${id}/season/${season}/videos`
 };
 
 export default Endpoints;

@@ -11,6 +11,7 @@ import NetworkRequest from "./api/request/network/NetworkRequest";
 import PersonRequest from "./api/request/person/PersonRequest";
 import ReviewRequest from "./api/request/review/ReviewRequest";
 import SearchRequest from "./api/request/search/SearchRequest";
+import SeasonRequest from "./api/request/season/SeasonRequest";
 import TrendingRequest from "./api/request/trending/TrendingRequest";
 import TVShowRequest from "./api/request/tv-show/TVShowRequest";
 import WatchProviderRequest from "./api/request/watch-provider/WatchProviderRequest";
@@ -53,6 +54,8 @@ class TMDBClient {
 
   public readonly watchProvider: WatchProviderRequest;
 
+  public readonly season: SeasonRequest;
+
   constructor(apiKey: string, version: TMDBVersion = "3") {
     this.version = version;
     this.apiKey = apiKey;
@@ -72,6 +75,7 @@ class TMDBClient {
     this.trending = new TrendingRequest(this.version, this.apiKey);
     this.watchProvider = new WatchProviderRequest(this.version, this.apiKey);
     this.episode = new EpisodeRequest(this.version, this.apiKey);
+    this.season = new SeasonRequest(this.version, this.apiKey);
   }
 }
 

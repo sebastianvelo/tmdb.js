@@ -1,5 +1,5 @@
 const Endpoints = {
-  find: (id: number) => `/${id}/`
+  find: (id: number) => `/${id}`
 };
 
 export default Endpoints;
