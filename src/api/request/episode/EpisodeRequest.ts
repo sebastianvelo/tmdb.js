@@ -10,7 +10,8 @@ import {
   ChangesResponse,
   CreditsResponse,
   ExternalIDsResponse,
-  ImagesResponse
+  ImagesResponse,
+  VideosResponse
 } from "../../common/response/CommonResponse";
 import {
   EpisodeAccountStatesResponse,
@@ -89,7 +90,7 @@ class EpisodeRequest extends TMDBRequest {
     season: number,
     episode: number,
     query?: VideosParams
-  ) => this.get(this.endpoints.getVideos(id, season, episode), query);
+  ) => this.get<VideosResponse>(this.endpoints.getVideos(id, season, episode), query);
 }
 
 export default EpisodeRequest;
